@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE library SYSTEM "library.dtd" >
+<library>
+<book id="1">
+<title>learn XML in 10 seconds</title>
+<list of authors>
+<author first="John" last="Fast" />
+<author first="Tom" last="Doyle" />
+</list of authors>
+<editor>Springer</editor>
+<price currency="dollar">40</price>
+<list of keywords>
+<keyword>XML</keyword>
+</list of keywords>
+</book>
+</library>
