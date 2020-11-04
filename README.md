@@ -67,10 +67,15 @@ This folder includes all sample input files which could be used to test the pyth
 * Command line input: `python xml-parser.1.py -i <filename.xml>`
 * Input file:[sample.xml](https://github.com/GW-HIVE/scripts/blob/master/input_data/sample.xml)
 
-## 14.[outFile](https://github.com/GW-HIVE/scripts/blob/master/outFile)
+## 14.[quote_csv.py](https://github.com/GW-HIVE/scripts/blob/master/quote_csv.py)
+* Function:	This script will add double quotes to all values in a csv file. If a value is already quoted, quotes will not be added to that value. If there is quoted text within a value the quoted text will now have two sets of quotes e.g. ""quoted text"".
+* Command line input: `python quote_csv.py -f input.csv -o output.csv`
+* Input file: any csv file.
+
+## 15.[outFile](https://github.com/GW-HIVE/scripts/blob/master/outFile)
 * This is a sample output file.
 
-## 15.Tips
+## 16.Tips
 * If you see "ImportError: No module named xxx" when you execute the script, just do "pip install xxx" and execute the script again.
 * All the python scripts are modified to be executed by Python3, if you meet problem arising from python version, please contact us at once.
 
