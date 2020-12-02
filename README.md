@@ -1,78 +1,78 @@
 # Welcome to the GWU HIVE lab python scripts repository.
 In this repository you will find useful resources related to the HIVE platfrom. For each script and folder, a breif introduction of their function and contents are listed as below. You can also click on each script to see for more details in the code documentation section.
 
-## 1.[input_data](https://github.com/GW-HIVE/scripts/tree/master/input_data)
+## 1.[input_data](https://github.com/GW-HIVE/scripts/tree/main/io_data/input_data)
 This folder includes all sample input files which could be used to test the python scripts.
 
-## 2.[csv-parser.1.py](https://github.com/GW-HIVE/scripts/blob/master/csv-parser.1.py)
+## 2.[csv-parser.1.py](https://github.com/Uncreative-Username-Generator/scripts/blob/main/python/csv-parser.1.py)
 * Function: This script will transfer the .csv file to dataframe and print(std out) all the rows in the file with row number.
 * Command line input: `python csv-parser.1.py -i <filename.csv>`
-* Input file:	[A.csv](https://github.com/GW-HIVE/scripts/blob/master/input_data/A.csv)
+* Input file:	[A.csv]https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
 
-## 3.[dump-csv-stats.py](https://github.com/GW-HIVE/scripts/blob/master/dump-csv-stats.py)
+## 3.[dump-csv-stats.py](https://github.com/GW-HIVE/scripts/blob/main/python/dump-csv-stats.py)
 * Function: This script will print (std out) the fieldnames and the number of elements in each fieldname after spited by value.
 * Command line input: `python dump-csv-stats.py -i <filename.csv> -d value`
-* Input file:	[A.csv](https://github.com/GW-HIVE/scripts/blob/master/input_data/A.csv)
+* Input file:	[A.csv](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
 
-## 4.[dump-fasta-stats.py](https://github.com/GW-HIVE/scripts/blob/master/dump-fasta-stats.py)
+## 4.[dump-fasta-stats.py](https://github.com/GW-HIVE/scripts/blob/main/python/dump-fasta-stats.py)
 * Function: This script will check the .fasta file that if there are duplicate IDs in the sequence.
 * Command line input: `python dump-fasta-stats.py -i <filename.fasta>`
-* Input file:	[sample.fasta](https://github.com/GW-HIVE/scripts/blob/master/input_data/sample.fasta)
+* Input file:	[sample.fasta](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/sample.fasta)
 
-## 5.[fasta-parser.py](https://github.com/GW-HIVE/scripts/blob/master/fasta-parser.py)
+## 5.[fasta-parser.py](https://github.com/GW-HIVE/scripts/blob/main/python/fasta-parser.py)
 * Function: This script will print (std out) the sequence of a record with id equals "ENST00000357654".
 * Command line input: `python fasta-parser.py -i <filename.fasta>`
-* Input file:	[sample.fasta](https://github.com/GW-HIVE/scripts/blob/master/input_data/sample.fasta)
+* Input file:	[sample.fasta](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/sample.fasta)
 
-## 6.[fastq-parser.py](https://github.com/GW-HIVE/scripts/blob/master/fastq-parser.py)
+## 6.[fastq-parser.py](https://github.com/GW-HIVE/scripts/blob/main/python/fastq-parser.py)
 * Function: This script will print (std out) the read_id, read_seq and read_qual from the input fastq file.
 * Command line input: `python fastq-parser.py -i <filename.fastq>`
-* Input file:	[1G_data.fastq](https://github.com/GW-HIVE/scripts/blob/master/input_data/1G_data.fastq)
+* Input file:	[1G_data.fastq](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/1G_data.fastq)
 
 
-## 7.[foramanraj.1.py](https://github.com/GW-HIVE/scripts/blob/master/foramanraj.1.py)
+## 7.[foramanraj.1.py](https://github.com/GW-HIVE/scripts/blob/main/python/foramanraj.1.py)
 * Function: This script will print(std out) all the fieldnames and field in the file path.
 * Command line input: `python foramanraj.py`
 * Input file:	No input files are required.
 
-## 8.[parse-big-fasta.py](https://github.com/GW-HIVE/scripts/blob/master/parse-big-fasta.py)
+## 8.[parse-big-fasta.py](https://github.com/GW-HIVE/scripts/blob/main/python/parse-big-fasta.py)
 * Function: This script was designed to parse the RVDB formatted FASTA headers so they can be interperated by HIVE-hexagon's tablequery
 * Command line input: `python parse-big-fasta.py -i <filename.fastq>`
 * Input file: N/A
 
 
-## 9.[parse-csv.py](https://github.com/GW-HIVE/scripts/blob/master/parse-csv.py)
+## 9.[parse-csv.py](https://github.com/GW-HIVE/p/parse-csv.py)
 * Function: This script will print(std out) an array. This array contains the original csv file and add a column at last. Elements in the new last column is the product of the third row and the fourth row, and it will ignore the first row(because it is normally titles for the rows)
 * Command line input: `python parse-csv.py`
 * Input file:	No input files are required.
 
-## 10.[sas7bdatTocsv.1.py](https://github.com/GW-HIVE/scripts/blob/master/sas7bdatTocsv.1.py)
+## 10.[sas7bdatTocsv.1.py](https://github.com/GW-HIVE/scripts/blob/main/python/sas7bdatTocsv.1.py)
 * Function: This script will transfer a .sas7bdat file to a .csv file.
 * Command line input: `python sas7bdatTocsv.1.py -i <input.sas7bdat> -o <output.csv>`
-* Input file:[gold.sas7bdat](https://github.com/GW-HIVE/scripts/blob/master/input_data/gold.sas7bdat)
+* Input file:[gold.sas7bdat](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/gold.sas7bdat)
 
-## 11.[sas7bdatTocsv.2.py](https://github.com/GW-HIVE/scripts/blob/master/sas7bdatTocsv.2.py)
+## 11.[sas7bdatTocsv.2.py](https://github.com/GW-HIVE/scripts/blob/main/python/sas7bdatTocsv.2.py)
 * Function: This script will transfer the .sas7bdat file to .csv format and print(std out) each line of the file(replace all the "," with ":" in each row).
 * Command line input: `python sas7bdatTocsv.2.py -i <filename.sas7bdat>`
-* Input file:[gold.sas7bdat](https://github.com/GW-HIVE/scripts/blob/master/input_data/gold.sas7bdat)
+* Input file:[gold.sas7bdat](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/gold.sas7bdat)
 
-## 12.[toy.py](https://github.com/GW-HIVE/scripts/blob/master/toy.py)
+## 12.[toy.py](https://github.com/GW-HIVE/scripts/blob/main/python/toy.py)
 * Function: This script will print(std out) all the rows with row number in a .csv file.
 * Command line input: `python parse-csv.py`
 * Input file:	No input files are required.
 
 
-## 13.[xml-parser.1.py](https://github.com/GW-HIVE/scripts/blob/master/xml-parser.1.py)
+## 13.[xml-parser.1.py](https://github.com/GW-HIVE/scripts/blob/main/python/xml-parser.1.py)
 * Function:	This script will print(std out) some domains of a .xml file.
 * Command line input: `python xml-parser.1.py -i <filename.xml>`
-* Input file:[sample.xml](https://github.com/GW-HIVE/scripts/blob/master/input_data/sample.xml)
+* Input file:[sample.xml](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/sample.xml)
 
-## 14.[quote_csv.py](https://github.com/GW-HIVE/scripts/blob/master/quote_csv.py)
+## 14.[quote_csv.py](https://github.com/GW-HIVE/scripts/blob/main/python/quote_csv.py)
 * Function:	This script will add double quotes to all values in a csv file. If a value is already quoted, quotes will not be added to that value. If there is quoted text within a value the quoted text will now have two sets of quotes e.g. ""quoted text"".
 * Command line input: `python quote_csv.py -f input.csv -o output.csv`
 * Input file: any csv file.
 
-## 15.[outFile](https://github.com/GW-HIVE/scripts/blob/master/outFile)
+## 15.[outFile](https://github.com/GW-HIVE/scripts/blob/main/io_data/outFile)
 * This is a sample output file.
 
 ## 16.[VCFReformatter.py](https://github.com/GW-HIVE/scripts/blob/main/python/VCFReformatter.py)
