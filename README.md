@@ -4,7 +4,7 @@ In this repository you will find useful resources related to the HIVE platfrom. 
 ## 1.[input_data](https://github.com/GW-HIVE/scripts/tree/main/io_data/input_data)
 This folder includes all sample input files which could be used to test the python scripts.
 
-## 2.[csv-parser.1.py](https://github.com/Uncreative-Username-Generator/scripts/blob/main/python/csv-parser.1.py)
+## 2.[csv-parser.1.py](https://github.com/GW-HIVE/scripts/blob/main/python/csv-parser.1.py)
 * Function: This script will transfer the .csv file to dataframe and print(std out) all the rows in the file with row number.
 * Command line input: `python csv-parser.1.py -i <filename.csv>`
 * Input file:	[A.csv]https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
