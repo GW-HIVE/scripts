@@ -17,12 +17,12 @@ sys.path.insert(0, os.path.abspath('../python'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'Biocompute Scripts'
+project = 'HIVE Lab Scripts'
 copyright = '2021, GW HIVE Lab'
 author = 'GW HIVE Lab'
 
 # The full version, including alpha/beta/rc tags
-release = '2020'
+release = '2021 Beta'
 
 
 # -- General configuration ---------------------------------------------------
