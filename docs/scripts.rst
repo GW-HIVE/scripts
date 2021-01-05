@@ -1,6 +1,11 @@
+Scripts
+=============
+
+
+
 `csv-parser.1.py <https://github.com/GW-HIVE/scripts/blob/main/python/csv-parser.1.py>`_
 
-.. autoclass:: python.module.csv_to_list_parser.py
+.. automodule:: python.module.csv_to_list_parser
    :members:
 
 

@@ -5,3 +5,8 @@ Welcome to GW HIVE Scripts's documentation!
    Scripts
    
    
+   Features
+   ---------
+   :ref: /scripts
+   
+   
