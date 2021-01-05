@@ -12,17 +12,17 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../scripts'))
+sys.path.insert(0, os.path.abspath('../python'))
 
 
 # -- Project information -----------------------------------------------------
 
-project = 'Biocompute Scripts'
+project = 'HIVE Lab Scripts'
 copyright = '2021, GW HIVE Lab'
 author = 'GW HIVE Lab'
 
 # The full version, including alpha/beta/rc tags
-release = '2020'
+release = '2021 Beta'
 
 
 # -- General configuration ---------------------------------------------------
@@ -30,7 +30,7 @@ release = '2020'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = [sphinx.ext.autodoc]
+extensions = ['sphinx.ext.autodoc']
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

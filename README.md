@@ -1,5 +1,5 @@
 # Welcome to the GWU HIVE lab python scripts repository.
-In this repository you will find useful resources related to the HIVE platfrom. For each script and folder, a breif introduction of their function and contents are listed as below. You can also click on each script to see for more details in the code documentation section.
+In this repository you will find useful resources related to the HIVE platfrom. For each script and folder, a brief introduction of their function and contents are listed as below. You can also click on each script to see for more details in the code documentation section.
 
 ## 1.[input_data](https://github.com/GW-HIVE/scripts/tree/main/io_data/input_data)
 This folder includes all sample input files which could be used to test the python scripts.
