@@ -8,8 +8,5 @@ Welcome to Biocompute Scripts's documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
-   Tutorials
-   Scripts
-   Liscense <https://github.com/GW-HIVE/scripts/blob/main/LICENSE>`_\
-   :hidden:
+    Scripts
+   `Liscense <https://github.com/GW-HIVE/scripts/blob/main/LICENSE>`_\
