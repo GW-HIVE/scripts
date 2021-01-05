@@ -7,6 +7,6 @@ Welcome to GW HIVE Scripts's documentation!
 Features
 ---------
    
-:ref: /scripts
+:ref:`/scripts`
    
    
