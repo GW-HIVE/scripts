@@ -1,8 +1,0 @@
-  to_parse: 
-    class: File
-    path: mapping_file.csv
-  to_parse_1: 
-    class: File
-    path: original_file.csv
-  filename: open_meee.csv
-  header_index: 1

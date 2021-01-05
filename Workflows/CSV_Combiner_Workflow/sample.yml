@@ -1,0 +1,9 @@
+  to_parse: 
+    class: Name_of_mapping_file
+    path: mapping_file.csv
+  to_parse_1: 
+    class: Name_of_original_file
+    path: original_file.csv
+  filename: desired_filename
+  header_index: Index_of_value_to_repleace
+  
