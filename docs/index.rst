@@ -11,4 +11,5 @@ Welcome to Biocompute Scripts's documentation!
    :caption: Contents:
    Tutorials
    Scripts
-   Liscense <https://github.com/GW-HIVE/scripts/blob/main/LICENSE>`_
+   Liscense <https://github.com/GW-HIVE/scripts/blob/main/LICENSE>`_\
+   :hidden:
