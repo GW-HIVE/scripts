@@ -7,14 +7,8 @@ Welcome to Biocompute Scripts's documentation!
 ==============================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   Tutorials
+   Scripts
+   Liscense <https://github.com/GW-HIVE/scripts/blob/main/LICENSE>`_
