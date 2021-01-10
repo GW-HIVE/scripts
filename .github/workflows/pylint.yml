@@ -16,8 +16,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint  
+        pip install pylint
+        pip install pylint-exit  
     - name: Analysing the code with pylint
       run: |
         cd python
-        pylint `ls -R|grep .py$|xargs` --ignore conf.py
+        pylint `ls -R|grep .py$|xargs` --ignore conf.py || pylint-exit $?
