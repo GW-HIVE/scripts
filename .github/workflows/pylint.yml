@@ -16,11 +16,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pylint
-    - name: Setting PYTHONPATH
-      run: |
-         cd python
-         pwd
+        pip install pylint  
     - name: Analysing the code with pylint
       run: |
+        cd python
         pylint `ls -R|grep .py$|xargs`
