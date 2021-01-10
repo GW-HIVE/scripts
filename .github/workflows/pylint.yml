@@ -19,7 +19,8 @@ jobs:
         pip install pylint
     - name: Setting PYTHONPATH
       run: |
-         cd ../python
+         pwd
+         cd python
     - name: Analysing the code with pylint
       run: |
         pylint `ls -R|grep .py$|xargs`
