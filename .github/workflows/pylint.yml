@@ -19,7 +19,7 @@ jobs:
         pip install pylint
     - name: Setting PYTHONPATH
       run: |
-         PYTHONPATH = "$ {PYTHONPATH} : .."
+         PYTHONPATH = ../python
     - name: Analysing the code with pylint
       run: |
         pylint `ls -R|grep .py$|xargs`
