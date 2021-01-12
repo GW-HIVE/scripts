@@ -1,6 +1,5 @@
 import csv
 
-
 """
 This script will print(std out) an array. 
 This array contains the original csv file and add a column at last. 
@@ -12,14 +11,13 @@ python parse-csv.py
 
 fr = open("A.csv", "r")
 data_frame = csv.reader(fr, delimiter=',', quotechar='"')
-row_count = 0
+ROW_COUNT = 0
 for row in data_frame:
-    row_count = row_count + 1
-    if row_count == 1:
+    ROW_COUNT = ROW_COUNT + 1
+    if ROW_COUNT == 1:
         continue
     new_row = row
     bmi = float(row[2])*float(row[3])
     new_row.append(str(bmi))
     print(new_row)
 fr.close()
-

@@ -1,8 +1,8 @@
 import sys
 from io import StringIO
-
+from argparse import ArgumentParser
 from lxml import etree
-from optparse import OptionParser
+
 
 __version__ = "1.0"
 __status__ = "Dev"
@@ -27,11 +27,11 @@ python xml-parser.1.py -i <filename.xml>
 def main():
     """sample"""
     usage = "\n%prog  [options]"
-    parser = OptionParser(usage, version="%prog " + __version__)
-    parser.add_option("-i", "--xmlFile", action="store", dest="xmlFile", help="Input xml file")
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--xmlFile", action="store", dest="xmlFile", help="Input xml file")
 
     (options, args) = parser.parse_args()
-    for file in ([options.xmlFile]):
+    for file in [options.xmlFile]:
         if not file:
             parser.print_help()
             sys.exit(0)

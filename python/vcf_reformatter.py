@@ -20,9 +20,9 @@ def chrom_grabber(inline):
                 if re.search(pattern, inline):
                     chrom = i
                     break
-    except:
+        return chrom
+    except UnboundLocalError:
         print('Found a non-conformer:', '\n', inline)
-    return chrom
 
 
 # Read through file, ignore the headers, grab all of the relevant information, print it out in
@@ -45,7 +45,8 @@ def main():
                     seqfilter = (re.split(r'\t', line)[6])
                     info = (re.split(r'\t', line)[7])
                     chromo = chrom_grabber(line)
-                    print(str(chromo) + '\t' + str(position) + '\t' + seqid + '\t' + ref + '\t' + alt +
+                    print(str(chromo) + '\t' + str(
+                        position) + '\t' + seqid + '\t' + ref + '\t' + alt +
                           '\t' + str(qual) + '\t' + seqfilter + '\t' + info + '\n', file=outFile,
                           end='')
                 except:
