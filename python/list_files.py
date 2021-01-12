@@ -22,8 +22,8 @@ def main():
     seen = {}
     for file_path in file_path_list:
         file_names = os.path.basename(file_path)
-        with open(file_path, 'r') as FR:
-            data_frame = csv.reader(FR, delimiter=',', quotechar='"')
+        with open(file_path, 'r') as file_reader:
+            data_frame = csv.reader(file_reader, delimiter=',', quotechar='"')
             row_count = 0
             for row in data_frame:
                 row_count += 1
@@ -38,8 +38,8 @@ def main():
         if len(file_names) > 1:
             for i in range(0, len(file_names)):
                 for j in range(i, len(file_names)):
-                    o = "%s.%s,%s.%s" % (file_names[i], field, file_names[j], field)
-                    print(o)
+                    output = "%s.%s,%s.%s" % (file_names[i], field, file_names[j], field)
+                    print(output)
 
 
 if __name__ == '__main__':

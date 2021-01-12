@@ -1,11 +1,12 @@
 import sys
 from argparse import ArgumentParser
+import ast
 
 __version__ = "1.0"
 
 """
-This script takes a CSV file and sums all numeric values in columns for rows with a specified header, mapping them to a
-single row with a new replacement header.
+This script takes a CSV file and sums all numeric values in columns for rows with a specified 
+header, mapping them to a single row with a new replacement header.
 
 Input: The index of the headers. 
        A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
@@ -21,8 +22,10 @@ def main():
     """sample"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
-    parser.add_argument("-i", "--csvfile", action="store", dest="csvfile", help="Name of CSV file to be summed")
-    parser.add_argument("-n", "--header_index", action="store", dest="header_index", help="Header Index")
+    parser.add_argument("-i", "--csvfile", action="store", dest="csvfile",
+                        help="Name of CSV file to be summed")
+    parser.add_argument("-n", "--header_index", action="store", dest="header_index",
+                        help="Header Index")
     parser.add_argument("-d", "--mapping_dict", action="store", dest="mapping_dict",
                         help="Name of file containing mapping_dict")
 
@@ -37,14 +40,14 @@ def main():
 
     # Second argument: name of the mapping file
     try:
-        mapping_dict = eval(open(options.mapping_dict).read())
+        mapping_dict = ast.literal_eval(open(options.mapping_dict).read())
     except FileNotFoundError:
         parser.print_help()
         sys.exit(0)
 
     # Third argument:
     try:
-        csv_as_list = eval(open(options.csvfile).read())
+        csv_as_list = ast.literal_eval(open(options.csvfile).read())
     except FileNotFoundError:
         parser.print_help()
         sys.exit(0)
@@ -76,7 +79,8 @@ def main():
                                 lines_to_append[mapping_dict[row[header_index]]][i] = value
                             else:
                                 lines_to_append[mapping_dict[row[header_index]]][i] = ""
-                    lines_to_append[mapping_dict[row[header_index]]][1] = mapping_dict[row[header_index]]
+                    lines_to_append[mapping_dict[row[header_index]]][1] =\
+                        mapping_dict[row[header_index]]
                 # else, there is already an instance of a replacement row
                 else:
                     # For each item in the row
@@ -91,7 +95,8 @@ def main():
                             # Set text in replacement line to be text from replacement value
                             lines_to_append[mapping_dict[row[header_index]]][i] = value
 
-            # If data does not contain a value to be summed, just add the new row to the new CSV contents
+            # If data does not contain a value to be summed, just add the new row to the new CSV
+            # contents
             else:
                 new_csv_file.append(row)
 

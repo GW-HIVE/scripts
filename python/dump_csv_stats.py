@@ -25,43 +25,44 @@ def main():
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="CSV input file")
-    parser.add_argument("-d", "--delim", action="store", dest="delim", help="Multi value column separator")
+    parser.add_argument("-d", "--delim", action="store", dest="delim", help="Multi value column "
+                                                                            "separator")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
     for file in ([options.infile, options.delim]):
         if not file:
             parser.print_help()
             sys.exit(0)
 
-    inFile = options.infile
+    in_file = options.infile
     delim = options.delim
 
     seen = {}
 
     count = {}
-    fieldList = []
-    with open(inFile, 'r') as csvfile:
+    field_list = []
+    with open(in_file, 'r') as csvfile:
         csvreader = csv.reader(csvfile, delimiter=',', quotechar='|')
-        rowCount = 0
+        row_count = 0
         for row in csvreader:
-            rowCount += 1
-            if rowCount == 1:
-                fieldList = row
-                for fieldName in fieldList:
-                    count[fieldName] = 0
-                    seen[fieldName] = {}
+            row_count += 1
+            if row_count == 1:
+                field_list = row
+                for field_name in field_list:
+                    count[field_name] = 0
+                    seen[field_name] = {}
             else:
                 for j in range(0, len(row)):
-                    fieldName = fieldList[j]
-                    valueList = row[j].strip().split(delim)
+                    field_name = field_list[j]
+                    value_list = row[j].strip().split(delim)
 
-                    for val in valueList:
-                        if val not in seen[fieldName]:
-                            count[fieldName] += 1
-                        seen[fieldName][val] = True
+                    for val in value_list:
+                        if val not in seen[field_name]:
+                            count[field_name] += 1
+                        seen[field_name][val] = True
 
-    for fieldName in fieldList:
-        print(fieldName, count[fieldName])
+    for field_name in field_list:
+        print(field_name, count[field_name])
 
 
 if __name__ == '__main__':

@@ -18,26 +18,25 @@ Usage:
 python fastq-parser.py -i <filename.fastq>
 """
 
-
-###############################
 def main():
     """sample"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
-    parser.add_argument("-i", "--fastqFile", action="store", dest="fastqFile", help="Input fastqFile")
+    parser.add_argument("-i", "--fastqFile", action="store", dest="fastqFile",
+                        help="Input fastqFile")
 
-    (options, args) = parser.parse_args()
-    for file in ([options.fastqFile]):
+    options, args = parser.parse_args()
+    for file in [options.fastqFile]:
         if not file:
             parser.print_help()
             sys.exit(0)
 
-    fastqFile = options.fastqFile
+    fastq_file = options.fastqFile
 
     # qual_sum = 0
     # n = 0
     # c_count, g_count = 0, 0
-    for record in SeqIO.parse(fastqFile, "fastq"):
+    for record in SeqIO.parse(fastq_file, "fastq"):
         read_id = record.id
         read_seq = str(record.seq)
         read_qual = record.letter_annotations["phred_quality"]

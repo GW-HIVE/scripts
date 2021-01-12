@@ -19,16 +19,16 @@ python fasta-parser.py -i <filename.fasta>
 """
 
 
-###############################
 def main():
     """sample"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
-    parser.add_argument("-i", "--fastaFile", action="store", dest="fastaFile", help="Input FASTA file")
+    parser.add_argument("-i", "--fastaFile", action="store", dest="fastaFile",
+                        help="Input FASTA file")
     parser.add_argument("-d", "--id", action="store", dest="Seq_ID", help="ID to check")
 
-    (options, args) = parser.parse_args()
-    for file in ([options.fastaFile]):
+    options = parser.parse_args()
+    for file in [options.fastaFile]:
         if not file:
             parser.print_help()
             sys.exit(0)

@@ -3,7 +3,8 @@
 
 ################################################################################
 # parse-big-fasta.py
-"""designed to parse the RVDB formatted FASTA headers so they can be interperated by HIVE-hexagon's tablequery"""
+"""designed to parse the RVDB formatted FASTA headers so they can be interperated by
+HIVE-hexagon's tablequery """
 ################################################################################
 
 __version__ = "1.0"
@@ -75,8 +76,8 @@ def main():
     accessions = format_header(parsed_args)
     print(accessions)
     with open('accessions.txt', 'w') as acc:
-        for a in accessions:
-            acc.write(a + '\n')
+        for accession in accessions:
+            acc.write(accession + '\n')
 
 
 # ______________________________________________________________________________#

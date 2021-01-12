@@ -21,8 +21,6 @@ Usage:
 python dump-fasta-stats.py -i <filename.fasta>
 """
 
-
-###############################
 def main():
     """
     sample
@@ -31,16 +29,16 @@ def main():
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="FASTA input file")
 
-    (options, args) = parser.parse_args()
-    for file in ([options.infile]):
+    options = parser.parse_args()
+    for file in [options.infile]:
         if not file:
             parser.print_help()
             sys.exit(0)
 
-    inFile = options.infile
+    in_file = options.infile
     seen = {}
     count = 0
-    for record in SeqIO.parse(inFile, "fasta"):
+    for record in SeqIO.parse(in_file, "fasta"):
         if record.id in seen:
             print("Id repeated: bad fasta file")
             sys.exit()

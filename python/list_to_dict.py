@@ -1,5 +1,6 @@
 import sys
 from argparse import ArgumentParser
+import ast
 
 __version__ = "1.0"
 
@@ -14,20 +15,26 @@ Deliminator = deliminator between values OPTIONAL
 
 
 def main():
-    """sample"""
+    """
+    sample
+    """
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
-    parser.add_argument("-i", "--infile", action="store", dest="infile", help="File containing list")
-    parser.add_argument("-d", "--delimator", action="store", dest="delimator", help="Deliminator for dictionary values")
-    parser.add_argument("-k", "--key", action="store", dest="key", help="Index for key for dictionary")
-    parser.add_argument("-v", "--value", action="store", dest="value", help="Index for value for dictionary")
-    (options, args) = parser.parse_args()
+    parser.add_argument("-i", "--infile", action="store", dest="infile",
+                        help="File containing list")
+    parser.add_argument("-d", "--delimator", action="store", dest="delimator",
+                        help="Deliminator for dictionary values")
+    parser.add_argument("-k", "--key", action="store", dest="key",
+                        help="Index for key for dictionary")
+    parser.add_argument("-v", "--value", action="store", dest="value",
+                        help="Index for value for dictionary")
+    options = parser.parse_args()
 
     # Dict to transform list into
     list_as_dict = {}
 
     try:
-        original_list = eval(open(options.infile).read())
+        original_list = ast.literal_eval(open(options.infile).read())
     except FileNotFoundError:
         parser.print_help()
         sys.exit()
