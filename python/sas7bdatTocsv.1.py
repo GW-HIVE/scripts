@@ -1,6 +1,7 @@
-import sys
 import csv
+import sys
 from argparse import ArgumentParser
+
 from sas7bdat import SAS7BDAT
 
 __version__ = "1.0"
@@ -26,6 +27,8 @@ def main():
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--sasFile", action="store", dest="sasFile", help="Input sas file")
     parser.add_argument("-o", "--csvFile", action="store", dest="csvFile", help="Output csv file")
+    parser.add_argument("-d", "--delim", action="store", dest="delim", help="Optional deliminator for output file. "
+                                                                            "If not provided, default is comma.")
 
     (options, args) = parser.parse_args()
     for file in ([options.sasFile, options.csvFile]):
@@ -38,7 +41,13 @@ def main():
     fw = csv.writer(open(out_file, 'wb'))
     with SAS7BDAT(sas_file) as f:
         for row in f:
-            fw.writerow(row)
+            line = str(row[0])
+            for i in range(1, len(row)):
+                row[i] = str(row[i])
+                if options.delim is not None:
+                    row[i] = row[i].replace(",", options.delim)
+                line += ", %s" % (str(row[i]))
+            fw.writerow(line)
 
 
 if __name__ == '__main__':
