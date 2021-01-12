@@ -1,5 +1,5 @@
 import sys
-from optparse import OptionParser
+from argparse import ArgumentParser
 import csv
 
 __version__ = "1.0"
@@ -18,19 +18,21 @@ This can show you some help information.
 Usage:
 python csv_to_list_parser.py -i <filename.csv>
 """
+
+
 ####################################################
 
 def main():
     """
     sample
     """
-    
+
     usage = "\n%prog  [options]"
-    parser = OptionParser(usage, version="%prog " + __version__)
-    parser.add_option("-i", "--infile", action="store", dest="infile", help="Input file")
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--infile", action="store", dest="infile", help="Input file")
     (options, args) = parser.parse_args()
     for file in ([options.infile]):
-        if not (file):
+        if not file:
             parser.print_help()
             sys.exit(0)
 
@@ -49,6 +51,7 @@ def main():
             csv_as_list.append(line_to_append)
             line_to_append = []
     print(csv_as_list)
+
 
 if __name__ == '__main__':
     main()

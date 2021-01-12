@@ -4,6 +4,7 @@ import csv
 # For taking command line arguments.
 import argparse
 
+
 # Arguments
 # ---------
 
@@ -18,7 +19,6 @@ import argparse
 
 
 def main(csv_file, output_file):
-
     # Read the original csv file and load data into a list.
     with open(csv_file, 'r') as file:
         original_file = csv.reader(file)
@@ -37,6 +37,7 @@ def main(csv_file, output_file):
 
     # Output message.
     print('csv file ' + csv_file + ' written with quotes to ' + output_file)
+
 
 # Command line arguments.
 if __name__ == "__main__":

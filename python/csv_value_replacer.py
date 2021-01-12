@@ -1,5 +1,6 @@
 import sys
-from optparse import OptionParser
+from argparse import ArgumentParser
+
 __version__ = "1.0"
 
 """
@@ -15,15 +16,14 @@ Input: The index of the headers.
 Output: Creates a new CSV file with the specified name.
 """
 
+
 def main():
     usage = "\n%prog  [options]"
-    parser = OptionParser(usage, version="%prog " + __version__)
-    parser.add_option("-i", "--csvfile", action="store", dest="csvfile", help="Name of CSV file to be summed")
-    parser.add_option("-n", "--header_index", action="store", dest="header_index", help="Header Index")
-    parser.add_option("-d", "--mapping_dict", action="store", dest="mapping_dict",
-                      help="Name of file containing mapping_dict")
-
-
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--csvfile", action="store", dest="csvfile", help="Name of CSV file to be summed")
+    parser.add_argument("-n", "--header_index", action="store", dest="header_index", help="Header Index")
+    parser.add_argument("-d", "--mapping_dict", action="store", dest="mapping_dict",
+                        help="Name of file containing mapping_dict")
 
     (options, args) = parser.parse_args()
 
@@ -34,18 +34,16 @@ def main():
         parser.print_help()
         sys.exit(0)
 
-
     # Second argument: name of the mapping file
     try:
-        mapping_dict = open(options.mapping_dict)
+        mapping_dict = eval(open(options.mapping_dict).read())
     except FileNotFoundError:
         parser.print_help()
         sys.exit(0)
 
-
     # Third argument:
     try:
-        csv_as_list = open(options.csvfile)
+        csv_as_list = eval(open(options.csvfile).read())
     except FileNotFoundError:
         parser.print_help()
         sys.exit(0)
@@ -69,11 +67,11 @@ def main():
                     if row[header_index].strip(" ") == mapping_dict[row[header_index]]:
                         lines_to_append[mapping_dict[row[header_index]]] = row
                     else:
-                        #Create blank line
+                        # Create blank line
                         lines_to_append[mapping_dict[row[header_index]]] = [""] * len(row)
                         for i in range(0, len(row)):
                             value = row[i]
-                            if type(value) == float:
+                            if isinstance(value, float):
                                 lines_to_append[mapping_dict[row[header_index]]][i] = value
                             else:
                                 lines_to_append[mapping_dict[row[header_index]]][i] = ""
@@ -84,7 +82,7 @@ def main():
                     for i in range(0, len(row)):
                         value = row[i]
                         # check if value is a float
-                        if type(value) == float:
+                        if isinstance(value, float):
                             # sum it to current value in that column
                             lines_to_append[mapping_dict[row[header_index]]][i] += float(value)
                         # If item is non float and belongs to replacement value

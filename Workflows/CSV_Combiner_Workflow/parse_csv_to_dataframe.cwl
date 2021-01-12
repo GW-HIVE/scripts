@@ -3,7 +3,8 @@ cwlVersion: v1.0
 $namespaces:
   sbg: 'https://www.sevenbridges.com/'
 id: parse_file
-baseCommand: []
+baseCommand:
+  - python ../python/csv_to_list_parser.py
 inputs:
   - id: to_parse
     type: File
@@ -18,9 +19,6 @@ arguments:
   - position: 0
     valueFrom: '-i'
 requirements:
-  - class: DockerRequirement
-    dockerOutputDirectory: \src
-    dockerPull: '87293/csv_parser_scripts:csv_to_list_parser'
   - class: InitialWorkDirRequirement
     listing:
       - $(inputs.to_parse)

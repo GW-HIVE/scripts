@@ -3,7 +3,8 @@ cwlVersion: v1.0
 $namespaces:
   sbg: 'https://www.sevenbridges.com/'
 id: value_replacer
-baseCommand: []
+baseCommand:
+  - python ../python/csv_value_replacer.py
 inputs:
   - id: header_index
     type: int
@@ -29,10 +30,9 @@ outputs:
 requirements:
   - class: DockerRequirement
     dockerOutputDirectory: \src
-    dockerPull: value_replacer
   - class: InitialWorkDirRequirement
     listing:
       - $(inputs.mapping_value)
       - $(inputs.original_csv)
   - class: InlineJavascriptRequirement
-stdout:  $(inputs.filename + '.csv')
+stdout: $(inputs.filename + '.csv')

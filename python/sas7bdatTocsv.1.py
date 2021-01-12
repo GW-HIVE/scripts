@@ -1,11 +1,9 @@
-import os,sys
-import string
+import sys
 import csv
-from optparse import OptionParser
+from argparse import ArgumentParser
 from sas7bdat import SAS7BDAT
 
-
-__version__="1.0"
+__version__ = "1.0"
 __status__ = "Dev"
 
 """
@@ -20,37 +18,28 @@ This can show you some help information.
 Usage:
 python sas7bdatTocsv.1.py -i <input.sas7bdat> -o <output.csv>
 """
+
+
 ###############################
 def main():
+    usage = "\n%prog  [options]"
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--sasFile", action="store", dest="sasFile", help="Input sas file")
+    parser.add_argument("-o", "--csvFile", action="store", dest="csvFile", help="Output csv file")
 
-        usage = "\n%prog  [options]"
-        parser = OptionParser(usage,version="%prog " + __version__)
-        parser.add_option("-i","--sasFile",action="store",dest="sasFile",help="Input sas file")
-	parser.add_option("-o","--csvFile",action="store",dest="csvFile",help="Output csv file")
+    (options, args) = parser.parse_args()
+    for file in ([options.sasFile, options.csvFile]):
+        if not file:
+            parser.print_help()
+            sys.exit(0)
 
-
-        (options,args) = parser.parse_args()
-        for file in ([options.sasFile, options.csvFile]):
-                if not (file):
-                        parser.print_help()
-                        sys.exit(0)
-
-        sasFile = options.sasFile
-	outFile = options.csvFile
-	FW = csv.writer(open('outFile', 'wb'))
-	with SAS7BDAT(sasFile) as f:
-    		for row in f:
-			FW.writerow(row)
-
+    sas_file = options.sasFile
+    out_file = options.csvFile
+    fw = csv.writer(open(out_file, 'wb'))
+    with SAS7BDAT(sas_file) as f:
+        for row in f:
+            fw.writerow(row)
 
 
 if __name__ == '__main__':
-        main()
-
-
-
-
-
-
-
-
+    main()

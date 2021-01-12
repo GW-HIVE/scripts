@@ -10,8 +10,8 @@ Usage:
 python parse-csv.py
 """
 
-FR = open("A.csv", "r")
-data_frame = csv.reader(FR, delimiter=',', quotechar='"')
+fr = open("A.csv", "r")
+data_frame = csv.reader(fr, delimiter=',', quotechar='"')
 row_count = 0
 for row in data_frame:
     row_count = row_count + 1
@@ -19,7 +19,7 @@ for row in data_frame:
         continue
     new_row = row
     bmi = float(row[2])*float(row[3])
-    new_row.append(bmi)
-    print (new_row)
-FR.close()
+    new_row.append(str(bmi))
+    print(new_row)
+fr.close()
 

@@ -1,9 +1,8 @@
-import os,sys
-import string
-from optparse import OptionParser
+import sys
+from argparse import ArgumentParser
 from Bio import SeqIO
 
-__version__="1.0"
+__version__ = "1.0"
 __status__ = "Dev"
 
 """
@@ -19,35 +18,32 @@ Usage:
 python fasta-parser.py -i <filename.fasta>
 """
 
+
 ###############################
 def main():
+    usage = "\n%prog  [options]"
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--fastaFile", action="store", dest="fastaFile", help="Input FASTA file")
+    parser.add_argument("-d", "--id", action="store", dest="Seq_ID", help="ID to check")
 
-        usage = "\n%prog  [options]"
-        parser = OptionParser(usage,version="%prog " + __version__)
-        parser.add_option("-i","--fastaFile",action="store",dest="fastaFile",help="Input fastaFile")
+    (options, args) = parser.parse_args()
+    for file in ([options.fastaFile]):
+        if not file:
+            parser.print_help()
+            sys.exit(0)
 
-        (options,args) = parser.parse_args()
-        for file in ([options.fastaFile]):
-                if not (file):
-                        parser.print_help()
-                        sys.exit(0)
+    fasta_file = options.fastaFile
 
-        fastaFile = options.fastaFile
+    try:
+        id_to_check = options.id
+    except ValueError:
+        parser.print_help()
+        sys.exit(0)
 
-	for record in SeqIO.parse(fastaFile, "fasta"):
-		if record.id == "ENST00000357654":
-			print ("%s" % (record.seq))
-
-
+    for record in SeqIO.parse(fasta_file, "fasta"):
+        if record.id == id_to_check:
+            print("%s" % record.seq)
 
 
 if __name__ == '__main__':
-        main()
-
-
-
-
-
-
-
-
+    main()

@@ -1,5 +1,5 @@
 import sys
-from optparse import OptionParser
+from argparse import ArgumentParser
 
 __version__ = "1.0"
 
@@ -12,16 +12,17 @@ value_index = column that values is in
 Deliminator = deliminator between values OPTIONAL
 """
 
+
 def main():
     usage = "\n%prog  [options]"
-    parser = OptionParser(usage, version="%prog " + __version__)
-    parser.add_option("-i", "--infile", action="store", dest="infile", help="File containing list")
-    parser.add_option("-d", "--delimator", action="store", dest="delimator", help="Deliminator for dictionary values")
-    parser.add_option("-k", "--key", action="store", dest="key", help="Index for key for dictionary")
-    parser.add_option("-v", "--value", action="store", dest="value", help="Index for value for dictionary")
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--infile", action="store", dest="infile", help="File containing list")
+    parser.add_argument("-d", "--delimator", action="store", dest="delimator", help="Deliminator for dictionary values")
+    parser.add_argument("-k", "--key", action="store", dest="key", help="Index for key for dictionary")
+    parser.add_argument("-v", "--value", action="store", dest="value", help="Index for value for dictionary")
     (options, args) = parser.parse_args()
 
-    #Dict to tranform list into
+    # Dict to transform list into
     list_as_dict = {}
 
     try:
@@ -30,6 +31,7 @@ def main():
         parser.print_help()
         sys.exit()
 
+    deliminator = None
     if options.delimator is not None:
         contains_deliminator = True
         deliminator = options.delimator

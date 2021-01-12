@@ -1,12 +1,8 @@
-import os,sys
-import string
-import json
-from optparse import OptionParser
-import csv
+import sys
+from argparse import ArgumentParser
 from Bio import SeqIO
 
-
-__version__="1.0"
+__version__ = "1.0"
 __status__ = "Dev"
 
 """
@@ -24,37 +20,32 @@ If no, it will output the number of sequence.
 Usage:
 python dump-fasta-stats.py -i <filename.fasta>
 """
+
+
 ###############################
 def main():
+    usage = "\n%prog  [options]"
+    parser = ArgumentParser(description=usage)
+    parser.add_argument("-i", "--infile", action="store", dest="infile", help="FASTA input file")
 
-	usage = "\n%prog  [options]"
-	parser = OptionParser(usage,version="%prog " + __version__)
-	parser.add_option("-i","--infile",action="store",dest="infile",help="FASTA input file")
+    (options, args) = parser.parse_args()
+    for file in ([options.infile]):
+        if not file:
+            parser.print_help()
+            sys.exit(0)
 
+    inFile = options.infile
+    seen = {}
+    count = 0
+    for record in SeqIO.parse(inFile, "fasta"):
+        if record.id in seen:
+            print("Id repeated: bad fasta file")
+            sys.exit()
+        count += 1
+        seen[record.id] = True
 
-	(options,args) = parser.parse_args()
-	for file in ([options.infile]):
-		if not (file):
-			parser.print_help()
-			sys.exit(0)
-
-
-	inFile = options.infile
-	seen = {}
-	count = 0
-	for record in SeqIO.parse(inFile, "fasta"):
-		if record.id in seen:
-			print ("Id repeated: bad fasta file")
-			sys.exit()
-		count += 1
-		seen[record.id] = True
-
-	print ("Number of sequence:", count)
-
-
+    print("Number of sequence:", count)
 
 
 if __name__ == '__main__':
-        main()
-
-
+    main()
