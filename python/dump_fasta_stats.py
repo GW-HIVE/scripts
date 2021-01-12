@@ -24,7 +24,9 @@ python dump-fasta-stats.py -i <filename.fasta>
 
 ###############################
 def main():
-    """sample"""
+    """
+    sample
+    """
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="FASTA input file")

@@ -22,9 +22,11 @@ python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv>
 
 
 def main():
-    """Transfer a .sas7bdat file to a .csv file."""
+    """
+    Transfer a .sas7bdat file to a .csv file.
+    """
     usage = "\n%prog  [options]"
-    parser = ArgumentParser(description=usage)
+    parser = ArgumentParser(description=usage) #Parser
     parser.add_argument("-i", "--sasFile", action="store", dest="sasFile", help="Input sas file")
     parser.add_argument("-o", "--csvFile", action="store", dest="csvFile", help="Output csv file")
     parser.add_argument("-d", "--delim", action="store", dest="delim", help="Optional deliminator "
