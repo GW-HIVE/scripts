@@ -21,8 +21,8 @@ python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv>
 """
 
 
-###############################
 def main():
+    """Transfer a .sas7bdat file to a .csv file."""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--sasFile", action="store", dest="sasFile", help="Input sas file")

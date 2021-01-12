@@ -14,6 +14,7 @@ Deliminator = deliminator between values OPTIONAL
 
 
 def main():
+    """sample"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="File containing list")

@@ -18,6 +18,7 @@ Output: Creates a new CSV file with the specified name.
 
 
 def main():
+    """sample"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--csvfile", action="store", dest="csvfile", help="Name of CSV file to be summed")

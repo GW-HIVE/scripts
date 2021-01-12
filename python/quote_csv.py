@@ -4,21 +4,23 @@ import csv
 # For taking command line arguments.
 import argparse
 
+"""
+Arguments
+---------
 
-# Arguments
-# ---------
+csv_file: the path to the original csv file to edit.
 
-# csv_file: the path to the original csv file to edit.
+output_file: the path to the output csv file that will contain the edits. File does not need to already exist.
 
-# output_file: the path to the output csv file that will contain the edits. File does not need to already exist.
+Returns
+-------
 
-# Returns
-# -------
-
-# The edited csv file to the path specified in output_file argument.
+The edited csv file to the path specified in output_file argument.
+"""
 
 
 def main(csv_file, output_file):
+    """sample"""
     # Read the original csv file and load data into a list.
     with open(csv_file, 'r') as file:
         original_file = csv.reader(file)
@@ -42,7 +44,7 @@ def main(csv_file, output_file):
 # Command line arguments.
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Commands for mapping script.')
-    parser.add_argument('--csv_file', '-f',
+    parser.add_argument('--csv_file', '-i',
                         help='The csv file')
     parser.add_argument('--output_file', '-o',
                         help='The output file')
