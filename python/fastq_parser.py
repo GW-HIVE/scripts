@@ -25,7 +25,7 @@ def main():
     parser.add_argument("-i", "--fastqFile", action="store", dest="fastqFile",
                         help="Input fastqFile")
 
-    options, args = parser.parse_args()
+    options = parser.parse_args()
     for file in [options.fastqFile]:
         if not file:
             parser.print_help()

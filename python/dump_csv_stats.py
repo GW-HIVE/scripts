@@ -1,5 +1,6 @@
 """
-This script will print (std out) the fieldnames and the number of elements in each fieldname after spited by value.
+This script will print (std out) the fieldnames and the number of elements in each fieldname after
+spited by value.
 This script has three options, you can execute the script in three ways:
 1. python dump-csv-stats.py --version
 This is the option that show you the program's version.

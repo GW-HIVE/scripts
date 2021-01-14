@@ -27,7 +27,7 @@ def main():
     parser.add_argument("-d", "--mapping_dict", action="store", dest="mapping_dict",
                         help="Name of file containing mapping_dict")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
 
     # First argument: index of the header value
     try:
@@ -101,7 +101,6 @@ def main():
     # Print contents to csv_file
     for line in new_csv_file:
         print(",".join((str(v) for v in line)))
-
 
 if __name__ == "__main__":
     main()

@@ -6,12 +6,14 @@ format per the standard.
 import re
 
 
-# Function to grab the chromosome number from the line, given HIVE's output style:
 def chrom_grabber(inline):
+    """
+    Function to grab the chromosome number from the line, given HIVE's output style
+    """
     try:
-        if 'chromosome x' in inline or 'chromosome X' in inline:
+        if 'chromosome x' in inline.lower():
             chrom = 'X'
-        elif 'chromosome y' in inline or 'chromosome Y' in inline:
+        elif 'chromosome y' in inline.lower():
             chrom = 'Y'
         elif 'mitochondrion' in inline:
             chrom = 'MT'

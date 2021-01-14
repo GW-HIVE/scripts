@@ -28,8 +28,8 @@ def create_arg_parser():
                         help='Path to the input FASTA.')
 
     parser.add_argument('-o', '--output',
-                        help='The output file for the new FASTA. If no output is provided the default will just '
-                             'append NEW to the file name')
+                        help='The output file for the new FASTA. If no output is provided the '
+                             'default will just append NEW to the file name')
 
     return parser
 

@@ -37,9 +37,9 @@ def main():
 
     xml_file = options.xmlFile
 
-    fr = open(xml_file)
-    xml = fr.read()
-    fr.close()
+    file_reader = open(xml_file)
+    xml = file_reader.read()
+    file_reader.close()
 
     context = etree.iterparse(StringIO(xml), events=("start", "end"))
 
