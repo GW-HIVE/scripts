@@ -21,4 +21,4 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         cd python
-        pylint `ls -R|grep .py$|xargs` --ignore conf.py || pylint-exit $?
+        pylint `ls -R|grep .py$|xargs` --ignore conf.py --ignore-imports=yes --min-similarity-lines=6|| pylint-exit $?
