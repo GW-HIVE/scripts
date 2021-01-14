@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f2bec1fc-752b-4a66-ba4c-a4a8754b0d41" name="Default Changelist" comment="Renaming scripts">
+      <change beforePath="$PROJECT_DIR$/../docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/../docs/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pylint.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/python.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_value_replacer.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_value_replacer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump_csv_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/dump_csv_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/quote_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vcf_reformatter.py" beforeDir="false" afterPath="$PROJECT_DIR$/vcf_reformatter.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="8469667b-b6d1-4f92-a3b3-a608e25ad3de" />
+  <component name="ProjectId" id="1myJfWWXFjqwK3QNMvVDoMjVaNr" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f2bec1fc-752b-4a66-ba4c-a4a8754b0d41" name="Default Changelist" comment="" />
+      <created>1610460002969</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1610460002969</updated>
+      <workItem from="1610460004446" duration="19570000" />
+    </task>
+    <task id="LOCAL-00001" summary="Renaming scripts">
+      <created>1610467062995</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1610467062996</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Renaming scripts">
+      <created>1610472276193</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610472276193</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Renaming scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renaming scripts" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1610483941851">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1610483941851" />
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1610577275136">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.702@0.0.1536.702" timestamp="1610472275270" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1610577275136" />
+    <state x="277" y="0" key="SettingsEditor" timestamp="1610484931986">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.702@0.0.1536.702" timestamp="1610467275946" />
+    <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610484931986" />
+    <state x="586" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610472283120">
+      <screen x="0" y="0" width="1536" height="702" />
+    </state>
+    <state x="586" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.702@0.0.1536.702" timestamp="1610472283120" />
+    <state x="431" y="23" width="672" height="678" key="search.everywhere.popup" timestamp="1610469115966">
+      <screen x="0" y="0" width="1536" height="702" />
+    </state>
+    <state x="431" y="23" width="672" height="678" key="search.everywhere.popup/0.0.1536.702@0.0.1536.702" timestamp="1610469115966" />
+  </component>
+</project>

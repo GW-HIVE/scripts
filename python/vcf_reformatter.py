@@ -29,12 +29,12 @@ def chrom_grabber(inline):
 # VCF format:
 def main():
     """sample"""
-    with open('SNPSampleTabs.vcf') as inFile, open('SNPSampleReformatted.vcf', 'w') as outFile:
+    with open('SNPSampleTabs.vcf') as in_file, open('SNPSampleReformatted.vcf', 'w') as out_file:
         # with open ('o29237-SNPprofile-all.vcf') as inFile, open ('SNPReformatted.vcf',
         # 'w') as outFile:
-        for line in inFile:
+        for line in in_file:
             if line[0] == '#':
-                print(line, file=outFile, end='')
+                print(line, file=out_file, end='')
             else:
                 try:
                     position = re.split(r'\t', line)[1]
@@ -47,7 +47,7 @@ def main():
                     chromo = chrom_grabber(line)
                     print(str(chromo) + '\t' + str(
                         position) + '\t' + seqid + '\t' + ref + '\t' + alt +
-                          '\t' + str(qual) + '\t' + seqfilter + '\t' + info + '\n', file=outFile,
+                          '\t' + str(qual) + '\t' + seqfilter + '\t' + info + '\n', file=out_file,
                           end='')
-                except:
+                except Exception:
                     print("Can't index, skipping...")

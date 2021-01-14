@@ -52,9 +52,9 @@ def main():
                     count[field_name] = 0
                     seen[field_name] = {}
             else:
-                for j in range(0, len(row)):
-                    field_name = field_list[j]
-                    value_list = row[j].strip().split(delim)
+                for index, value in enumerate(row):
+                    field_name = field_list[index]
+                    value_list = value.strip().split(delim)
 
                     for val in value_list:
                         if val not in seen[field_name]:

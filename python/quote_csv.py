@@ -3,7 +3,6 @@ import csv
 
 # For taking command line arguments.
 import argparse
-
 """
 Arguments
 ---------

@@ -61,44 +61,40 @@ def main():
     new_csv_file = []
 
     for row in csv_as_list:
-        # Skip blank rows
-        if len(row) > 0:
-            # If row contains data to be summed
-            if row[header_index] in mapping_dict:
-                # If there currently is no line replacement row, initialize one
-                if mapping_dict[row[header_index]] not in lines_to_append:
-                    # If the row contains the data to sum to
-                    if row[header_index].strip(" ") == mapping_dict[row[header_index]]:
-                        lines_to_append[mapping_dict[row[header_index]]] = row
-                    else:
-                        # Create blank line
-                        lines_to_append[mapping_dict[row[header_index]]] = [""] * len(row)
-                        for i in range(0, len(row)):
-                            value = row[i]
-                            if isinstance(value, float):
-                                lines_to_append[mapping_dict[row[header_index]]][i] = value
-                            else:
-                                lines_to_append[mapping_dict[row[header_index]]][i] = ""
-                    lines_to_append[mapping_dict[row[header_index]]][1] =\
-                        mapping_dict[row[header_index]]
-                # else, there is already an instance of a replacement row
+        # If row contains data to be summed
+        if row[header_index] in mapping_dict:
+            # If there currently is no line replacement row, initialize one
+            if mapping_dict[row[header_index]] not in lines_to_append:
+                # If the row contains the data to sum to
+                if row[header_index].strip(" ") == mapping_dict[row[header_index]]:
+                    lines_to_append[mapping_dict[row[header_index]]] = row
                 else:
-                    # For each item in the row
-                    for i in range(0, len(row)):
-                        value = row[i]
-                        # check if value is a float
+                    # Create blank line
+                    lines_to_append[mapping_dict[row[header_index]]] = [""] * len(row)
+                    for index, value in enumerate(row):
                         if isinstance(value, float):
-                            # sum it to current value in that column
-                            lines_to_append[mapping_dict[row[header_index]]][i] += float(value)
-                        # If item is non float and belongs to replacement value
-                        elif row[header_index] == mapping_dict[row[header_index]]:
-                            # Set text in replacement line to be text from replacement value
-                            lines_to_append[mapping_dict[row[header_index]]][i] = value
-
-            # If data does not contain a value to be summed, just add the new row to the new CSV
-            # contents
+                            lines_to_append[mapping_dict[row[header_index]]][index] = value
+                        else:
+                            lines_to_append[mapping_dict[row[header_index]]][index] = ""
+                lines_to_append[mapping_dict[row[header_index]]][1] =\
+                    mapping_dict[row[header_index]]
+            # else, there is already an instance of a replacement row
             else:
-                new_csv_file.append(row)
+                # For each item in the row
+                for index, value in enumerate(row):
+                    # check if value is a float
+                    if isinstance(value, float):
+                        # sum it to current value in that column
+                        lines_to_append[mapping_dict[row[header_index]]][index] += float(value)
+                    # If item is non float and belongs to replacement value
+                    elif row[header_index] == mapping_dict[row[header_index]]:
+                        # Set text in replacement line to be text from replacement value
+                        lines_to_append[mapping_dict[row[header_index]]][index] = value
+
+        # If data does not contain a value to be summed, just add the new row to the new CSV
+        # contents
+        else:
+            new_csv_file.append(row)
 
     # Add new lines at the end of the CSV contents
     for value in lines_to_append:

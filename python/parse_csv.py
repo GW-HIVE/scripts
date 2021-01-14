@@ -1,5 +1,4 @@
 import csv
-
 """
 This script will print(std out) an array. 
 This array contains the original csv file and add a column at last. 
