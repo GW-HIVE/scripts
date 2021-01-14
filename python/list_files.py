@@ -1,19 +1,17 @@
+"""
+This script will print(std out) all the fieldnames and field in the file path.
+input:
+all the <filename.csv> under folder you set.
+Usage:
+python foramanraj.py
+"""
 import os
 import csv
 import glob
 
 __version__ = "1.0"
 __status__ = "Dev"
-"""
-This script will print(std out) all the fieldnames and field in the file path.
-input: 
-all the <filename.csv> under folder you set.
-Usage:
-python foramanraj.py
-"""
 
-
-###############################
 def main():
     """sample"""
     pattern = "*.csv"

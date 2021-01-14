@@ -1,17 +1,17 @@
+"""
+This script takes a file containing a CSV as a list and returns transforms it into a dict
+
+Input: File containing python list
+key_index = column that key for dictionary is in
+value_index = column that values is in
+Deliminator = deliminator between values OPTIONAL
+"""
+
 import sys
 from argparse import ArgumentParser
 import ast
 
 __version__ = "1.0"
-
-"""
-This script takes a file containing a CSV as a list and returns transforms it into a dict
-
-Input: File containing python list
-key_index = column that key for dictionary is in 
-value_index = column that values is in
-Deliminator = deliminator between values OPTIONAL
-"""
 
 
 def main():

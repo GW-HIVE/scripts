@@ -1,5 +1,7 @@
-# Script will reprocess the vcf output of a HIVE Heptagon file to be in the appropriate vcf file
-# format per the standard.
+"""
+Script will reprocess the vcf output of a HIVE Heptagon file to be in the appropriate vcf file
+format per the standard.
+"""
 
 import re
 
@@ -49,5 +51,5 @@ def main():
                         position) + '\t' + seqid + '\t' + ref + '\t' + alt +
                           '\t' + str(qual) + '\t' + seqfilter + '\t' + info + '\n', file=out_file,
                           end='')
-                except Exception:
+                except IndexError:
                     print("Can't index, skipping...")

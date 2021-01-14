@@ -1,10 +1,10 @@
-#!/usr/bin/env python
+"""designed to parse the RVDB formatted FASTA headers so they can be interperated by
+HIVE-hexagon's tablequery """
+# !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 ################################################################################
 # parse-big-fasta.py
-"""designed to parse the RVDB formatted FASTA headers so they can be interperated by
-HIVE-hexagon's tablequery """
 ################################################################################
 
 __version__ = "1.0"
@@ -21,7 +21,8 @@ def create_arg_parser():
     Creates and returns the ArgumentParser object.
     """
 
-    parser = argparse.ArgumentParser(description='Fixes RVDB fasta file header format for HIVE-hexagon and tablequery.')
+    parser = argparse.ArgumentParser(
+        description='Fixes RVDB fasta file header format for HIVE-hexagon and tablequery.')
 
     parser.add_argument('inputFASTA',
                         help='Path to the input FASTA.')

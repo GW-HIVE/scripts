@@ -1,15 +1,10 @@
-# For editing the csv file.
-import csv
-
-# For taking command line arguments.
-import argparse
 """
 Arguments
 ---------
 
 csv_file: the path to the original csv file to edit.
 
-output_file: the path to the output csv file that will contain the edits. File does not need to 
+output_file: the path to the output csv file that will contain the edits. File does not need to
 already exist.
 
 Returns
@@ -17,6 +12,12 @@ Returns
 
 The edited csv file to the path specified in output_file argument.
 """
+
+# For editing the csv file.
+import csv
+
+# For taking command line arguments.
+import argparse
 
 
 def main(csv_file, output_file):

@@ -1,12 +1,12 @@
-import csv
 """
-This script will print(std out) an array. 
-This array contains the original csv file and add a column at last. 
-Elements in the new last column is the product of the third row and the fourth row, 
+This script will print(std out) an array.
+This array contains the original csv file and add a column at last.
+Elements in the new last column is the product of the third row and the fourth row,
 and it will ignore the first row(because it is normally titles for the rows)
 Usage:
 python parse-csv.py
 """
+import csv
 
 fr = open("A.csv", "r")
 data_frame = csv.reader(fr, delimiter=',', quotechar='"')

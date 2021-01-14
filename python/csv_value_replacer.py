@@ -1,24 +1,19 @@
 """
+This script takes a CSV file and sums all numeric values in columns for rows with a specified
+header, mapping them to a single row with a new replacement header.
 
+Input: The index of the headers.
+       A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
+       The CSV file to change.
+       The desired name of the new CSV file.
+
+
+Output: Creates a new CSV file with the specified name.
 """
 import sys
 from argparse import ArgumentParser
 import ast
-
 __version__ = "1.0"
-
-"""
-This script takes a CSV file and sums all numeric values in columns for rows with a specified 
-header, mapping them to a single row with a new replacement header.
-
-Input: The index of the headers. 
-       A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
-       The CSV file to change.
-       The desired name of the new CSV file.
-       
-       
-Output: Creates a new CSV file with the specified name.
-"""
 
 
 def main():
@@ -79,7 +74,7 @@ def main():
                             lines_to_append[mapping_dict[row[header_index]]][index] = value
                         else:
                             lines_to_append[mapping_dict[row[header_index]]][index] = ""
-                lines_to_append[mapping_dict[row[header_index]]][1] =\
+                lines_to_append[mapping_dict[row[header_index]]][1] = \
                     mapping_dict[row[header_index]]
             # else, there is already an instance of a replacement row
             else:

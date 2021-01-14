@@ -1,12 +1,3 @@
-import sys
-from io import StringIO
-from argparse import ArgumentParser
-from lxml import etree
-
-
-__version__ = "1.0"
-__status__ = "Dev"
-
 """
 This script will print(std out) some domains of a .xml file.
 This script has three options, you can execute the script in three ways:
@@ -17,11 +8,19 @@ This can show you some help information.
 3. python xml-parser.1.py -i <filename.xml>
 -i specifies input
 This option will open the .xml file you input.
-If the element tag is "book", it will output all the attributes of elements. 
+If the element tag is "book", it will output all the attributes of elements.
 If the element tag is "title", it will output the text of the elements.
 Usage:
 python xml-parser.1.py -i <filename.xml>
 """
+import sys
+from io import StringIO
+from argparse import ArgumentParser
+from lxml import etree  # pylint: disable=import-error
+
+
+__version__ = "1.0"
+__status__ = "Dev"
 
 
 def main():
@@ -30,7 +29,7 @@ def main():
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--xmlFile", action="store", dest="xmlFile", help="Input xml file")
 
-    (options, args) = parser.parse_args()
+    options = parser.parse_args()
     for file in [options.xmlFile]:
         if not file:
             parser.print_help()

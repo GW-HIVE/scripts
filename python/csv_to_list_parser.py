@@ -1,12 +1,5 @@
-import sys
-from argparse import ArgumentParser
-import csv
-
-__version__ = "1.0"
-__status__ = "Dev"
-
 """
-This script will transfer a .csv file to dataframe and print (std out) a list. Automatically tries 
+This script will transfer a .csv file to dataframe and print (std out) a list. Automatically tries
 to convert numerical values into floats.
 This script has three options, you can execute the script in three ways:
 1. python csv_to_list_parser.py --version
@@ -18,6 +11,13 @@ This can show you some help information.
 Usage:
 python csv_to_list_parser.py -i <filename.csv>
 """
+
+import sys
+from argparse import ArgumentParser
+import csv
+
+__version__ = "1.0"
+__status__ = "Dev"
 
 
 def main():

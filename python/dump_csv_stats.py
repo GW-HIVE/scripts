@@ -1,10 +1,3 @@
-import sys
-from argparse import ArgumentParser
-import csv
-
-__version__ = "1.0"
-__status__ = "Dev"
-
 """
 This script will print (std out) the fieldnames and the number of elements in each fieldname after spited by value.
 This script has three options, you can execute the script in three ways:
@@ -18,8 +11,14 @@ Usage:
 python dump-csv-stats.py -i <filename.csv> -d value
 """
 
+import sys
+from argparse import ArgumentParser
+import csv
 
-###############################
+__version__ = "1.0"
+__status__ = "Dev"
+
+
 def main():
     """sample"""
     usage = "\n%prog  [options]"

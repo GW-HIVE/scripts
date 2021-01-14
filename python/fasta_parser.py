@@ -1,10 +1,3 @@
-import sys
-from argparse import ArgumentParser
-from Bio import SeqIO
-
-__version__ = "1.0"
-__status__ = "Dev"
-
 """
 This script will print (std out) the sequence of a record with id equals "ENST00000357654".
 This script has three options, you can execute the script in three ways:
@@ -17,6 +10,13 @@ This can show you some help information.
 Usage:
 python fasta-parser.py -i <filename.fasta>
 """
+
+import sys
+from argparse import ArgumentParser
+from Bio import SeqIO  # pylint: disable=import-error
+
+__version__ = "1.0"
+__status__ = "Dev"
 
 
 def main():

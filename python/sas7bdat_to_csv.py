@@ -1,12 +1,3 @@
-import csv
-import sys
-from argparse import ArgumentParser
-
-from sas7bdat import SAS7BDAT
-
-__version__ = "1.0"
-__status__ = "Dev"
-
 """
 This script will transfer a .sas file to a .csv file.
 This script has three options, you can execute the script in three ways:
@@ -19,6 +10,13 @@ This can show you some help information.
 Usage:
 python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv>
 """
+import csv
+import sys
+from argparse import ArgumentParser
+from sas7bdat import SAS7BDAT   # pylint: disable=import-error
+
+__version__ = "1.0"
+__status__ = "Dev"
 
 
 def main():
