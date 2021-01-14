@@ -34,9 +34,9 @@ def main():
     for field in seen:
         file_names = seen[field]
         if len(file_names) > 1:
-            for i in range(0, len(file_names)):
-                for j in range(i, len(file_names)):
-                    output = "%s.%s,%s.%s" % (file_names[i], field, file_names[j], field)
+            for index, value in enumerate(file_names):
+                for j in range(index, len(file_names)):
+                    output = "%s.%s,%s.%s" % (value, field, file_names[j], field)
                     print(output)
 
 

@@ -38,7 +38,6 @@ def main():
     delim = options.delim
 
     seen = {}
-
     count = {}
     field_list = []
     with open(in_file, 'r') as csvfile:
