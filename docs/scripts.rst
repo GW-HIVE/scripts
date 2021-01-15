@@ -48,7 +48,7 @@ Scripts
 
 `sas7bdat_to_csv.py <https://github.com/GW-HIVE/scripts/blob/main/python/sas7bdatTocsv.1.py>`_
 
-.. automodule:: sas7bdat_to_csv.py
+.. automodule:: sas7bdat_to_csv
    :members:
 
 
