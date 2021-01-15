@@ -8,5 +8,6 @@ Features
 ---------
    
 :doc:`/scripts`
+:doc:`/workflows`
    
    
