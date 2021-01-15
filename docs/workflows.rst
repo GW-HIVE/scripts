@@ -7,7 +7,7 @@ CSV Combiner Workflow
 Allows a user to
 
 .. figure:: cwl_workflow_visual.PNG
-   :width: 300
+   :width: 500
    :alt: Workflow
    
 Inputs:
