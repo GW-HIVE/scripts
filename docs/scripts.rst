@@ -1,6 +1,12 @@
 Scripts
 =============
 
+.. toctree:
+   misc_scripts
+   csv_scripts
+   fasta_fastq_scripts
+
+
 :doc:`/csv_scripts`
 ^^^^^^^^^^^^^^^^^^^
 **Scripts Invovling CSV files**
