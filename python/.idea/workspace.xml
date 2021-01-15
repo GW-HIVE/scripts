@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f2bec1fc-752b-4a66-ba4c-a4a8754b0d41" name="Default Changelist" comment="Renaming scripts">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/csv_to_list_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_to_list_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump_csv_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/dump_csv_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_files.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +39,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610460002969</updated>
       <workItem from="1610460004446" duration="24033000" />
+      <workItem from="1610723558853" duration="1242000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming scripts">
       <created>1610467062995</created>
