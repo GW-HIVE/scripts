@@ -1,4 +1,4 @@
-FASTA/FASTQ SCRIPTS
+FASTA/FASTQ Scripts
 =====================
 
 **Scripts involving**
