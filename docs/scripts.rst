@@ -31,7 +31,7 @@ Scripts
 
 `foramanraj.py <https://github.com/GW-HIVE/scripts/blob/main/python/foramanraj.1.py>`_
 
-.. automodule:: foramanraj.
+.. automodule:: foramanraj
    :members:
 
 
