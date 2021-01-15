@@ -1,10 +1,14 @@
 """
 This script will transfer a .sas file to a .csv file.
+
 This script has three options, you can execute the script in three ways:
+
+
 1. python sas7bdat_to_csv.py --version
-This is the option that show you the program's version.
+      This is the option that show you the program's version.
+
 2. python sas7bdat_to_csv.py -h
-This can show you some help information.
+    This can show you some help information.
 3. python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv>
 -i specifies input
 Usage:

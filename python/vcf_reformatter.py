@@ -29,10 +29,9 @@ def chrom_grabber(inline):
         print('Found a non-conformer:', '\n', inline)
 
 
-# Read through file, ignore the headers, grab all of the relevant information, print it out in
-# VCF format:
 def main():
-    """sample"""
+    """Read through file, ignore the headers, grab all of the relevant information, print it out in
+    VCF format."""
     with open('SNPSampleTabs.vcf') as in_file, open('SNPSampleReformatted.vcf', 'w') as out_file:
         # with open ('o29237-SNPprofile-all.vcf') as inFile, open ('SNPReformatted.vcf',
         # 'w') as outFile:

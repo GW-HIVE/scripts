@@ -1,14 +1,21 @@
 """
 This script will print (std out) the fieldnames and the number of elements in each fieldname after
 spited by value.
+
+
 This script has three options, you can execute the script in three ways:
+
 1. python dump-csv-stats.py --version
-This is the option that show you the program's version.
+   This is the option that show you the program's version.
+
 2. python dump-csv-stats.py -h
-This can show you some help information.
+   This can show you some help information.
+
 3. python dump-csv-stats.py -i <filename.csv> -d value
--i specifies input
+  -i specifies input
+
 Usage:
+
 python dump-csv-stats.py -i <filename.csv> -d value
 """
 
@@ -21,7 +28,7 @@ __status__ = "Dev"
 
 
 def main():
-    """sample"""
+    """Find and print the number of elements in each fieldname"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="CSV input file")

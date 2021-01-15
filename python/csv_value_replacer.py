@@ -2,6 +2,7 @@
 This script takes a CSV file and sums all numeric values in columns for rows with a specified
 header, mapping them to a single row with a new replacement header.
 
+
 Input: The index of the headers.
        A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
        The CSV file to change.
