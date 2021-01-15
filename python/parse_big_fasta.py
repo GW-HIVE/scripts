@@ -1,4 +1,4 @@
-"""designed to parse the RVDB formatted FASTA headers so they can be interperated by
+"""Parses RVDB formatted FASTA headers so they can be interperated by
 HIVE-hexagon's tablequery """
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -37,7 +37,7 @@ def create_arg_parser():
 # ______________________________________________________________________________#
 def format_header(parsed_args):
     """
-    parse the RVDB formatted FASTA headers and re-writes in desired format
+    Parse the RVDB formatted FASTA headers and re-writes in desired format
     """
 
     accessions = []

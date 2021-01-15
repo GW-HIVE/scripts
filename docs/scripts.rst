@@ -11,9 +11,13 @@ Scripts
 ^^^^^^^^^^^^^^^^^^^
 **Scripts Invovling CSV files**
 
+
+
 :doc:`/fasta_fastq_scripts`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **Scripts involving fasta/fastq files**
+
+
 
 :doc:`/misc_scripts`
 ^^^^^^^^^^^^^^^^^^^^
