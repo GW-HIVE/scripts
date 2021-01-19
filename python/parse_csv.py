@@ -15,8 +15,14 @@ Output:
 
 Usage
 """""""
+    1. python parse_csv.py --version
+    This is the option that show you the program's version.
 
-python parse-csv.py
+    2. python parse_csv.py -h
+    This can show you some help information.
+
+    3. python parse_csv.py -i <filename.csv>
+    Runs program with specified csv file
 """
 import csv
 from argparse import ArgumentParser

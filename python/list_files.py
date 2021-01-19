@@ -1,22 +1,22 @@
 """
 This script will print(std out) all the fieldnames and field in the file path.
-Input:
-""""""
 
+Input:
+#######
 -p : file path to check
 
 Output:
-""""""""
+#######
 All the filenames and fields under CSV files in a specified path
 
 Usage
-""""""
+#######
     1. python fastq-parser.py --version
     This is the option that show you the program's version.
-    
+
     2. python fastq-parser.py -h
     This can show you some help information.
-      
+
     3. python fastq-parser.py -i <filename.fastq>
     Runs program with specified file path
 """

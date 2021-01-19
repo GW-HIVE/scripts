@@ -2,22 +2,22 @@
 This script will transfer a .sas file to a .csv file.
 
 Input:
-"""""""
+########
 
     * -i : input sas7bdat file
     * -o : desired output CSV file
     * -d : deliminator to write between columns in output file OPTIONAL
-    
-    
+
+
 
 Output:
-"""""""
+########
 
     * sas7bdat file as CSV file, with possible deliminator between columns
 
 
 Usage:
-"""""""
+########
 
     1. python sas7bdat_to_csv.py --version
     This is the option that show you the program's version.

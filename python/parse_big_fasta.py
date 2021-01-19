@@ -3,14 +3,26 @@ Parses RVDB formatted FASTA headers so they can be interperated by
 HIVE-hexagon's tablequery
 
 Input:
-""""""
+#######
+    * -i : input FASTA file to reformat
+
+    * -o : specified output file
 
 Output:
-""""""""
+#######
+    * Reformatted FASTA file
 
 Usage:
-"""""""
+#######
 
+    1. python parse_big_fasta.py --version
+    This is the option that show you the program's version.
+
+    2. python parse_big_fasta.py -h
+    This can show you some help information.
+
+    3. python parse_big_fasta.py -i <filename.fasta> -o <output_file>
+    Runs program with specified FASTA file and output file
 
 """
 # !/usr/bin/env python
@@ -37,7 +49,7 @@ def create_arg_parser():
     parser = argparse.ArgumentParser(
         description='Fixes RVDB fasta file header format for HIVE-hexagon and tablequery.')
 
-    parser.add_argument('inputFASTA',
+    parser.add_argument('-i', 'inputFASTA',
                         help='Path to the input FASTA.')
 
     parser.add_argument('-o', '--output',

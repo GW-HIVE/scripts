@@ -1,26 +1,30 @@
 """
 This script will print(std out) some domains of a .xml file.
 
-This script has three options, you can execute the script in three ways:
+Input:
+######
+* -i : specified input file
 
-1. python xml-parser.1.py --version
+Output:
+#######
+
+* Some domains of a .xml file
+
+Usage:
+#######
+
+1. python xml-parser.py --version
 
    This is the option that show you the program's version.
 
-2. python xml-parser.1.py -h
+2. python xml-parser.py -h
 
    This can show you some help information.
 
 3. python xml-parser.1.py -i <filename.xml>
 
-   -i specifies input
+   Runs program with specified input file
 
-This option will open the .xml file you input.
-If the element tag is "book", it will output all the attributes of elements.
-If the element tag is "title", it will output the text of the elements.
-
-Usage:
-   python xml-parser.1.py -i <filename.xml>
 """
 import sys
 from io import StringIO

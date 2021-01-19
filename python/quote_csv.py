@@ -1,19 +1,30 @@
-"""
+"""This script will add double quotes to all values in a csv file. If a value is already quoted,
+quotes will not be added to that value. If there is quoted text within a value the quoted text
+will now have two sets of quotes e.g. ""quoted text"".
+
 Input:
-"""""""
+#######
 
 * -i : the path to the original csv file to edit.
 
-* -o : the path to the output csv file that will contain the edits. File does not need to
-already exist.
+* -o : the path to the output csv file that will contain the edits.
 
 Output:
-""""""
+#######
 
 * The edited csv file to the path specified in output_file argument.
 
 Usage:
-""""""
+#######
+
+    1. python quote_csv.py --version
+    This is the option that show you the program's version.
+
+    2. python quote_csv.py -h
+    This can show you some help information.
+
+    3. python quote_csv.py -i <filename.csv> -o <output_file.csv>
+    Runs program with specified file to quote and output file
 
 """
 
