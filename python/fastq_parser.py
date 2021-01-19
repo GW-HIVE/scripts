@@ -11,14 +11,17 @@ Output:
 
 Usage:
 #######
-    1. python fastq-parser.py --version
-    This is the option that show you the program's version.
+    * python fastq-parser.py --version
 
-    2. python fastq-parser.py -h
-    This can show you some help information.
+    *This is the option that show you the program's version.*
 
-    3. python fastq-parser.py -i <filename.fastq>
-    Runs program with specified fastq file
+    * python fastq-parser.py -h
+
+    *This can show you some help information.*
+
+    * python fastq-parser.py -i <filename.fastq>
+
+    *Runs program with specified fastq file*
 """
 import sys
 from argparse import ArgumentParser

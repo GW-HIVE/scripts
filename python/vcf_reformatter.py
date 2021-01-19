@@ -4,24 +4,28 @@ format per the standard.
 
 Input:
 ########
-* -i : specified file to reformat
-* -o : specified output file
+    * -i : specified file to reformat
+
+    * -o : specified output file
 
 
 Output:
 ########
-* Reformed vcf file
+    * Reformed vcf file
 
 Usage:
 ########
-    1. python vcf_reformatter.py --version
-    This is the option that show you the program's version.
+    * python vcf_reformatter.py --version
 
-    2. python vcf_reformatter.py -h
-    This can show you some help information.
+    *This is the option that show you the program's version.*
 
-    3. python vcf_reformatter.py -i <input.vcf> -o <output.vcf>
-    Runs the program with specified input file, output file
+    * python vcf_reformatter.py -h
+
+    *This can show you some help information.*
+
+    * python vcf_reformatter.py -i <input.vcf> -o <output.vcf>
+
+    *Runs the program with specified input file, output file*
 
 
 """

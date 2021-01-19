@@ -19,14 +19,17 @@ Output:
 Usage:
 ########
 
-    1. python sas7bdat_to_csv.py --version
-    This is the option that show you the program's version.
+    * python sas7bdat_to_csv.py --version
 
-    2. python sas7bdat_to_csv.py -h
-    This can show you some help information.
+    * This is the option that show you the program's version.*
 
-    3. python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv> -d <deliminator>
-    Runs the program with specified input file, output file, and deliminator
+    * python sas7bdat_to_csv.py -h
+
+    * This can show you some help information.*
+
+    * python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv> -d <deliminator>
+
+    * Runs the program with specified input file, output file, and deliminator.*
 
 
 """

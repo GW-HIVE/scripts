@@ -14,16 +14,17 @@ Output:
 
 Usage:
 #######
-    1. python dump-fasta-stats.py --version
+    * python dump-fasta-stats.py --version
 
-    This is the option that show you the program's version.
+   * This is the option that show you the program's version.*
 
-    2. python dump-fasta-stats.py -h
+    * python dump-fasta-stats.py -h
 
-    This can show you some help information.
+   * This can show you some help information.*
 
-    3. python dump-fasta-stats.py -i <filename.fasta>
-    This will check the .fasta file that if there are duplicate IDs in the sequence.
+    * python dump-fasta-stats.py -i <filename.fasta>
+
+   * This will check the .fasta file that if there are duplicate IDs in the sequence. *
 
 """
 

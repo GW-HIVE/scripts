@@ -4,6 +4,7 @@ This script will print (std out) the sequence of a record with specified ID.
 Input:
 #######
     * -i : .fasta file to search for record
+
     * -v : ID to search for
 
 Output:
@@ -13,15 +14,17 @@ Output:
 
 Usage:
 #######
-    1. python fasta-parser.py --version
-    This is the option that show you the program's version.
+    * python fasta-parser.py --version *
 
-    2. python fasta-parser.py -h
+    * This is the option that show you the program's version. *
 
-    This can show you some help information.
+    * python fasta-parser.py -h
 
-    3. python fasta-parser.py -i <filename.fasta> -v <ID>
-    Runs program with specified file and ID
+    * This can show you some help information.
+
+    * python fasta-parser.py -i <filename.fasta> -v <ID>
+
+    *Runs program with specified file and ID*
 
 """
 

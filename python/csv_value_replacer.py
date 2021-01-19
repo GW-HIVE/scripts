@@ -5,29 +5,31 @@ header, mapping them to a single row with a new replacement header.
 
 Input:
 ########
-* -i : CSV file to sum as a list
-* -v : The index of the headers.
-* -d : Mapping dictionary
-    * *key*: value to sum to,
-    * *value*: values to sum
+    * -i : CSV file to sum as a list
+
+    * -v : The index of the headers.
+
+    * -d : Mapping dictionary
+        * *key*: value to sum to,
+        * *value*: values to sum
 
 Output:
 ########
-* Summed CSV file
+    * Summed CSV file
 
 Usage:
 ########
-1. python csv_value_replacer.py --version
+    * python csv_value_replacer.py --version
 
-        This is the option that show you the program's version.
+    *This is the option that show you the program's version.*
 
-2. python csv_value_replacer.py-h
+    * python csv_value_replacer.py-h
 
-        This can show you some help information.
+    *This can show you some help information.*
 
-3. python csv_value_replacer.py -i <filename.txt> -v <header_index> -d <mapping_dict>
+    * python csv_value_replacer.py -i <filename.txt> -v <header_index> -d <mapping_dict>
 
-        Runs the program given the specified CSV file.
+    *Runs the program given the specified CSV file.*
 
 """
 import sys

@@ -3,27 +3,28 @@ This script will print(std out) some domains of a .xml file.
 
 Input:
 ######
-* -i : specified input file
+
+    * -i : specified input file
 
 Output:
 #######
 
-* Some domains of a .xml file
+    * Some domains of a .xml file
 
 Usage:
 #######
 
-1. python xml-parser.py --version
+    * python xml-parser.py --version
 
-   This is the option that show you the program's version.
+    * This is the option that show you the program's version.*
 
-2. python xml-parser.py -h
+    * python xml-parser.py -h
 
-   This can show you some help information.
+    * This can show you some help information.*
 
-3. python xml-parser.1.py -i <filename.xml>
+    * python xml-parser.1.py -i <filename.xml>
 
-   Runs program with specified input file
+   *Runs program with specified input file*
 
 """
 import sys

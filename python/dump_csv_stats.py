@@ -5,27 +5,28 @@ spited by deliminator
 
 Input:
 ########
-* -i : CSV file to search
-* -d : Deliminator to split file by
+    * -i : CSV file to search
+
+    * -d : Deliminator to split file by
 
 Output:
 ########
-* Fieldnames and number of elements in each fieldname
+    * Fieldnames and number of elements in each fieldname
 
 Usage:
 ########
 
-1. python dump-csv-stats.py --version
+    * python dump-csv-stats.py --version
 
-   This is the option that show you the program's version.
+   *This is the option that show you the program's version.*
 
-2. python dump-csv-stats.py -h
+    * python dump-csv-stats.py -h
 
-   This can show you some help information.
+   *This can show you some help information.*
 
-3. python dump-csv-stats.py -i <filename.csv> -d deliminator
+    * python dump-csv-stats.py -i <filename.csv> -d deliminator
 
-   Runs the program with the specified CSV file and deliminator.
+   *Runs the program with the specified CSV file and deliminator.*
 """
 
 import sys

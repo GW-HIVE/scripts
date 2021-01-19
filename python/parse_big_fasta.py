@@ -15,14 +15,17 @@ Output:
 Usage:
 #######
 
-    1. python parse_big_fasta.py --version
-    This is the option that show you the program's version.
+    *python parse_big_fasta.py --version
 
-    2. python parse_big_fasta.py -h
-    This can show you some help information.
+    *This is the option that show you the program's version.*
 
-    3. python parse_big_fasta.py -i <filename.fasta> -o <output_file>
-    Runs program with specified FASTA file and output file
+    *python parse_big_fasta.py -h
+
+    *This can show you some help information*
+
+    *python parse_big_fasta.py -i <filename.fasta> -o <output_file>
+
+    *Runs program with specified FASTA file and output file*
 
 """
 # !/usr/bin/env python

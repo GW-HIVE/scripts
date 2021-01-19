@@ -17,14 +17,17 @@ Output:
 Usage:
 #######
 
-    1. python quote_csv.py --version
-    This is the option that show you the program's version.
+    * python quote_csv.py --version
 
-    2. python quote_csv.py -h
-    This can show you some help information.
+    *This is the option that show you the program's version.*
 
-    3. python quote_csv.py -i <filename.csv> -o <output_file.csv>
-    Runs program with specified file to quote and output file
+    * python quote_csv.py -h
+
+    *This can show you some help information.*
+
+    * python quote_csv.py -i <filename.csv> -o <output_file.csv>
+
+    *Runs program with specified file to quote and output file*
 
 """
 
