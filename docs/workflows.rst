@@ -17,11 +17,11 @@ Inputs:
 	* Index of tag 
 	* Desired filename
 	* CSV file that maps value to sum to identification value
-         * Column 1: value to replace (values separated by a semicolon)
-	 	 * Column 2: replacement value (must also be a value in column_1) 
+		* Column 1: value to replace (values separated by a semicolon)
+		* Column 2: replacement value (must also be a value in column_1) 
 Outputs:
 """""""""
-Summed CSV file
+* Summed CSV file
 
 Usage:
 """"""
