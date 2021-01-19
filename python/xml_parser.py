@@ -36,6 +36,8 @@ def main():
     """Finds and prints XML domains"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     parser.add_argument("-i", "--xmlFile", action="store", dest="xmlFile", help="Input xml file")
 
     options = parser.parse_args()

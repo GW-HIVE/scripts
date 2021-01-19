@@ -1,5 +1,18 @@
-"""Parses RVDB formatted FASTA headers so they can be interperated by
-HIVE-hexagon's tablequery """
+"""
+Parses RVDB formatted FASTA headers so they can be interperated by
+HIVE-hexagon's tablequery
+
+Input:
+""""""
+
+Output:
+""""""""
+
+Usage:
+"""""""
+
+
+"""
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -17,7 +30,7 @@ import argparse
 
 # ______________________________________________________________________________#
 def create_arg_parser():
-    """"
+    """
     Creates and returns the ArgumentParser object.
     """
 
@@ -71,7 +84,9 @@ def format_header(parsed_args):
 # ______________________________________________________________________________#
 
 def main():
-    """sample"""
+    """
+    Write reformatted .fasta to specified file
+    """
     arg_parser = create_arg_parser()
     parsed_args = arg_parser.parse_args(sys.argv[1:])
     accessions = format_header(parsed_args)

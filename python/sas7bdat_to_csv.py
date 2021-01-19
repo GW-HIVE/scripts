@@ -1,20 +1,34 @@
 """
 This script will transfer a .sas file to a .csv file.
 
-This script has three options, you can execute the script in three ways:
+Input:
+"""""""
 
+    * -i : input sas7bdat file
+    * -o : desired output CSV file
+    * -d : deliminator to write between columns in output file OPTIONAL
+    
+    
 
-1. **python sas7bdat_to_csv.py --version**
-      This is the option that show you the program's version.
+Output:
+"""""""
 
-2. **python sas7bdat_to_csv.py -h**
-    This can show you some help information.
+    * sas7bdat file as CSV file, with possible deliminator between columns
 
-3. **python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv>**
-    -i specifies input
 
 Usage:
-       **python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv>**
+"""""""
+
+    1. python sas7bdat_to_csv.py --version
+    This is the option that show you the program's version.
+
+    2. python sas7bdat_to_csv.py -h
+    This can show you some help information.
+
+    3. python sas7bdat_to_csv.py -i <input.sas7bdat> -o <output.csv> -d <deliminator>
+    Runs the program with specified input file, output file, and deliminator
+
+
 """
 import csv
 import sys
@@ -32,6 +46,8 @@ def main():
 
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)  # Parser
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     parser.add_argument("-i", "--sasFile", action="store", dest="sasFile", help="Input sas file")
     parser.add_argument("-o", "--csvFile", action="store", dest="csvFile", help="Output csv file")
     parser.add_argument("-d", "--delim", action="store", dest="delim", help="Optional deliminator "

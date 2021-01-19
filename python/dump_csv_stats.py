@@ -1,9 +1,18 @@
 """
 This script will print (std out) the fieldnames and the number of elements in each fieldname after
-spited by value.
+spited by deliminator
 
 
-This script has three options, you can execute the script in three ways:
+Input:
+"""""""
+* -i : CSV file to search
+* -d : Deliminator to split file by 
+
+Output:
+""""""""
+* Fieldnames and number of elements in each fieldname
+Usage:
+""""""
 
 1. python dump-csv-stats.py --version
    This is the option that show you the program's version.
@@ -12,11 +21,7 @@ This script has three options, you can execute the script in three ways:
    This can show you some help information.
 
 3. python dump-csv-stats.py -i <filename.csv> -d value
-  -i specifies input
-
-Usage:
-
-python dump-csv-stats.py -i <filename.csv> -d value
+   Runs the program with the specified CSV file and deliminator.
 """
 
 import sys
@@ -34,6 +39,8 @@ def main():
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="CSV input file")
     parser.add_argument("-d", "--delim", action="store", dest="delim", help="Multi value column "
                                                                             "separator")
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
 
     options = parser.parse_args()
     for file in ([options.infile, options.delim]):

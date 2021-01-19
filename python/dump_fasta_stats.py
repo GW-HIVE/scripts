@@ -1,17 +1,25 @@
 """
 This script will check the .fasta file that if there are duplicate IDs in the sequence.
-This script has three options, you can execute the script in three ways:
-1. python dump-fasta-stats.py --version
-This is the option that show you the program's version.
-2. python dump-fasta-stats.py -h
-This can show you some help information.
-3. python dump-fasta-stats.py -i <filename.fasta>
-This will check the .fasta file that if there are duplicate IDs in the sequence.
-If yes, it will output "Id repeated: bad fasta file".
-If no, it will output the number of sequence.
--i specifies input
+
+Input:
+""""""
+* -i : .fasta file to check
+
+Output:
+"""""""
+* If duplicate IDs, output will be "Id repeated: bad fasta file".
+* If no duplicated IDs, output will be the number of sequence.
 Usage:
-python dump-fasta-stats.py -i <filename.fasta>
+""""""
+    1. python dump-fasta-stats.py --version
+    This is the option that show you the program's version.
+    
+    2. python dump-fasta-stats.py -h
+    This can show you some help information.
+    
+    3. python dump-fasta-stats.py -i <filename.fasta>
+    This will check the .fasta file that if there are duplicate IDs in the sequence.
+      
 """
 
 import sys
@@ -24,10 +32,12 @@ __status__ = "Dev"
 
 def main():
     """
-    sample
+    Prints number of sequences.
     """
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="FASTA input file")
 
     options = parser.parse_args()
@@ -37,17 +47,25 @@ def main():
             sys.exit(0)
 
     in_file = options.infile
+
+    print("Number of sequence:", count_sequences(in_file))
+
+
+if __name__ == '__main__':
+    main()
+
+
+def count_sequences(file_to_check):
+    """
+    Count number of sequences.
+    Inform the user if a ID repeats.
+    """
     seen = {}
     count = 0
-    for record in SeqIO.parse(in_file, "fasta"):
+    for record in SeqIO.parse(file_to_check, "fasta"):
         if record.id in seen:
             print("Id repeated: bad fasta file")
             sys.exit()
         count += 1
         seen[record.id] = True
-
-    print("Number of sequence:", count)
-
-
-if __name__ == '__main__':
-    main()
+    return count

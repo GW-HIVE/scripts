@@ -1,14 +1,20 @@
 """
 Input:
+"""""""
 
-csv_file: the path to the original csv file to edit.
+* -i : the path to the original csv file to edit.
 
-output_file: the path to the output csv file that will contain the edits. File does not need to
+* -o : the path to the output csv file that will contain the edits. File does not need to
 already exist.
 
 Output:
+""""""
 
-The edited csv file to the path specified in output_file argument.
+* The edited csv file to the path specified in output_file argument.
+
+Usage:
+""""""
+
 """
 
 # For editing the csv file.
@@ -19,7 +25,7 @@ import argparse
 
 
 def main(csv_file, output_file):
-    """sample"""
+    """Quote original CSV file and write contents to specified output file"""
     # Read the original csv file and load data into a list.
     with open(csv_file, 'r') as file:
         original_file = csv.reader(file)
@@ -47,6 +53,8 @@ if __name__ == "__main__":
                         help='The csv file')
     parser.add_argument('--output_file', '-o',
                         help='The output file')
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     args = parser.parse_args()
 
     main(args.csv_file, args.output_file)

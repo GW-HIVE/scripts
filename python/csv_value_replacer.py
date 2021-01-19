@@ -3,13 +3,23 @@ This script takes a CSV file and sums all numeric values in columns for rows wit
 header, mapping them to a single row with a new replacement header.
 
 
-Input: The index of the headers.
-       A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
-       The CSV file to change.
-       The desired name of the new CSV file.
+Input:
+"""""""" 
+
+* The index of the headers.
+* A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
+* The CSV file to change.
+* The desired name of the new CSV file.
 
 
-Output: Creates a new CSV file with the specified name.
+Output: 
+""""""""
+
+* Creates a new CSV file with the specified name.
+
+Usage:
+"""""""
+
 """
 import sys
 from argparse import ArgumentParser
@@ -18,7 +28,7 @@ __version__ = "1.0"
 
 
 def main():
-    """sample"""
+    """Sum CSV file"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--csvfile", action="store", dest="csvfile",
@@ -27,6 +37,8 @@ def main():
                         help="Header Index")
     parser.add_argument("-d", "--mapping_dict", action="store", dest="mapping_dict",
                         help="Name of file containing mapping_dict")
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
 
     options = parser.parse_args()
 

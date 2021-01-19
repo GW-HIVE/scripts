@@ -1,6 +1,19 @@
 """
 Script will reprocess the vcf output of a HIVE Heptagon file to be in the appropriate vcf file
 format per the standard.
+
+Input:
+""""""
+
+
+Output:
+"""""""
+
+
+Usage:
+""""""""
+
+
 """
 
 import re

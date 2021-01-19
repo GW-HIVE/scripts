@@ -1,14 +1,24 @@
 """
 This script will print (std out) the read_id, read_seq and read_qual from the input fastq file.
-This script has three options, you can execute the script in three ways:
-1. python fastq-parser.py --version
-This is the option that show you the program's version.
-2. python fastq-parser.py -h
-This can show you some help information.
-3. python fastq-parser.py -i <filename.fastq>
--i specifies input
+
+Input:
+""""""
+    * -i : fastq file to print values from 
+
+Output:
+"""""""
+    * read_id, read_seq and read_qual
+
 Usage:
-python fastq-parser.py -i <filename.fastq>
+""""""""
+    1. python fastq-parser.py --version
+    This is the option that show you the program's version.
+    
+    2. python fastq-parser.py -h
+    This can show you some help information.
+      
+    3. python fastq-parser.py -i <filename.fastq>
+    Runs program with specified fastq file
 """
 import sys
 from argparse import ArgumentParser
@@ -19,9 +29,11 @@ __status__ = "Dev"
 
 
 def main():
-    """sample"""
+    """Print read_id, read_seq and read_qual"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     parser.add_argument("-i", "--fastqFile", action="store", dest="fastqFile",
                         help="Input fastqFile")
 

@@ -2,8 +2,17 @@
 This script will transfer a .csv file to dataframe and print (std out) a list. Automatically tries
 to convert numerical values into floats.
 
-This script has three options, you can execute the script in three ways:
 
+Input:
+""""""
+* CSV to print
+
+Output:
+"""""""
+* CSV as list
+
+Usage
+""""""
 1. python csv_to_list_parser.py --version
 
         This is the option that show you the program's version.
@@ -14,11 +23,7 @@ This script has three options, you can execute the script in three ways:
 
 3. python csv_to_list_parser.py -i <filename.csv>
 
-       -i specifies input
-
-Usage:
-
-python csv_to_list_parser.py -i <filename.csv>
+        Runs the program given the specified CSV file.
 """
 
 import sys
@@ -37,6 +42,8 @@ def main():
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--infile", action="store", dest="infile", help="Input file")
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     options = parser.parse_args()
     for file in [options.infile]:
         if not file:

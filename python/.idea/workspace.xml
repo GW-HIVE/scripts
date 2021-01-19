@@ -1,7 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2bec1fc-752b-4a66-ba4c-a4a8754b0d41" name="Default Changelist" comment="Renaming scripts" />
+    <list default="true" id="f2bec1fc-752b-4a66-ba4c-a4a8754b0d41" name="Default Changelist" comment="Renaming scripts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_to_list_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_to_list_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/csv_value_replacer.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_value_replacer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump_csv_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/dump_csv_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dump_fasta_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/dump_fasta_stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fasta_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/fasta_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fastq_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastq_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_files.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/list_to_dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_to_dict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_big_fasta.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_big_fasta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/parse_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quote_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/quote_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sas7bdat_to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/sas7bdat_to_csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xml_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/xml_parser.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +53,7 @@
       <updated>1610460002969</updated>
       <workItem from="1610460004446" duration="24033000" />
       <workItem from="1610723558853" duration="7703000" />
+      <workItem from="1611069251300" duration="4196000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming scripts">
       <created>1610467062995</created>
@@ -83,6 +99,10 @@
     </state>
     <state x="277" y="0" key="SettingsEditor/0.0.1536.702@0.0.1536.702" timestamp="1610467275946" />
     <state x="277" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1610484931986" />
+    <state x="378" y="38" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611070814270">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="378" y="38" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1611070814270" />
     <state x="586" y="265" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1610472283120">
       <screen x="0" y="0" width="1536" height="702" />
     </state>

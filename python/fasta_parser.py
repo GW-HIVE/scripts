@@ -23,6 +23,8 @@ def main():
     """sample"""
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     parser.add_argument("-i", "--fastaFile", action="store", dest="fastaFile",
                         help="Input FASTA file")
     parser.add_argument("-d", "--id", action="store", dest="Seq_ID", help="ID to check")

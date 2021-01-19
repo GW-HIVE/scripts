@@ -1,10 +1,27 @@
 """
 This script takes a file containing a CSV as a list and returns transforms it into a dict
 
-Input: File containing python list
-key_index = column that key for dictionary is in
-value_index = column that values is in
-Deliminator = deliminator between values OPTIONAL
+Input
+"""""""
+    * -i : File containing python list
+    * -k : key_index (column that key for dictionary is in)
+    * -v : value_index (column that values is in)
+    * -d : Deliminator (deliminator between values OPTIONAL)
+
+Output:
+"""""""
+    * A dict with key = key_index and value = value_index
+
+Usage:
+""""""
+    1. python list_to_dict.py --version
+    This is the option that show you the program's version.
+    
+    2. python list_to_dict.py -h
+    This can show you some help information.
+      
+    3. python list_to_dict.py -i <filename.txt> -k <key_index> -v <value_index> -d <deliminator>
+    Runs program with specified file, key index, value index, and optional deliminator
 """
 
 import sys
@@ -16,7 +33,7 @@ __version__ = "1.0"
 
 def main():
     """
-    sample
+    Write list to dict
     """
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
@@ -28,6 +45,8 @@ def main():
                         help="Index for key for dictionary")
     parser.add_argument("-v", "--value", action="store", dest="value",
                         help="Index for value for dictionary")
+    parser.add_argument('--version', '-V', action='version',
+                        version="%(prog)s " + __version__)
     options = parser.parse_args()
 
     # Dict to transform list into
