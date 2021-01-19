@@ -5,24 +5,27 @@ Elements in the new last column is the product of the third row and the fourth r
 and it will ignore the first row(because it is normally titles for the rows)
 
 Input:
-""""""""
+########
     * -i : CSV to combine
 
 Output:
-""""""""
-    
+########
+
     * Array containing original CSV file and additional column
 
 Usage
-"""""""
-    1. python parse_csv.py --version
-    This is the option that show you the program's version.
+########
+    * python parse_csv.py --version
 
-    2. python parse_csv.py -h
-    This can show you some help information.
+    *This is the option that show you the program's version*.
 
-    3. python parse_csv.py -i <filename.csv>
-    Runs program with specified csv file
+    * python parse_csv.py -h
+
+    *This can show you some help information.*
+
+    * python parse_csv.py -i <filename.csv>
+
+    *Runs program with specified csv file*
 """
 import csv
 from argparse import ArgumentParser

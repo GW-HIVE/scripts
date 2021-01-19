@@ -5,7 +5,7 @@ to convert numerical values into floats.
 
 Input:
 ########
-* **-i **: CSV to print
+* -i : CSV to print
 
 Output:
 ########
