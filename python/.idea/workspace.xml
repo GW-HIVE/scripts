@@ -5,17 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csv_to_list_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_to_list_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/csv_value_replacer.py" beforeDir="false" afterPath="$PROJECT_DIR$/csv_value_replacer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump_csv_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/dump_csv_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dump_fasta_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/dump_fasta_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fasta_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/fasta_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fastq_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/fastq_parser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_files.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_files.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/list_to_dict.py" beforeDir="false" afterPath="$PROJECT_DIR$/list_to_dict.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_big_fasta.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_big_fasta.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/parse_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/parse_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quote_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/quote_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sas7bdat_to_csv.py" beforeDir="false" afterPath="$PROJECT_DIR$/sas7bdat_to_csv.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xml_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/xml_parser.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +42,7 @@
       <updated>1610460002969</updated>
       <workItem from="1610460004446" duration="24033000" />
       <workItem from="1610723558853" duration="7703000" />
-      <workItem from="1611069251300" duration="4196000" />
+      <workItem from="1611069251300" duration="4951000" />
     </task>
     <task id="LOCAL-00001" summary="Renaming scripts">
       <created>1610467062995</created>

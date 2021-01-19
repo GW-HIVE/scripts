@@ -4,15 +4,15 @@ to convert numerical values into floats.
 
 
 Input:
-""""""
-* CSV to print
+########
+* **-i **: CSV to print
 
 Output:
-"""""""
+########
 * CSV as list
 
 Usage
-""""""
+########
 1. python csv_to_list_parser.py --version
 
         This is the option that show you the program's version.

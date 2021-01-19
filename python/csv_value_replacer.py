@@ -4,21 +4,19 @@ header, mapping them to a single row with a new replacement header.
 
 
 Input:
-"""""""" 
+########
+* **-i** : CSV file to sum as a list
+* **-v** : The index of the headers.
+* **-d** : Mapping dictionary
+    * *key*: value to sum to,
+    * *value*: values to sum
 
-* The index of the headers.
-* A CSV file of the form  -> header_to_sum_1;header_to_sum_2,replacement_header.
-* The CSV file to change.
-* The desired name of the new CSV file.
-
-
-Output: 
-""""""""
-
-* Creates a new CSV file with the specified name.
+Output:
+########
+* Summed CSV file
 
 Usage:
-"""""""
+########
 
 """
 import sys
@@ -33,7 +31,7 @@ def main():
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--csvfile", action="store", dest="csvfile",
                         help="Name of CSV file to be summed")
-    parser.add_argument("-n", "--header_index", action="store", dest="header_index",
+    parser.add_argument("-v", "--header_index", action="store", dest="header_index",
                         help="Header Index")
     parser.add_argument("-d", "--mapping_dict", action="store", dest="mapping_dict",
                         help="Name of file containing mapping_dict")
