@@ -37,6 +37,9 @@ import csv
 # For taking command line arguments.
 import argparse
 
+__version__ = "1.0"
+__status__ = "Dev"
+
 
 def main(csv_file, output_file):
     """Quote original CSV file and write contents to specified output file"""

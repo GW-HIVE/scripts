@@ -33,6 +33,9 @@ Usage:
 import re
 from argparse import ArgumentParser
 
+__version__ = "1.0"
+__status__ = "Dev"
+
 
 def chrom_grabber(inline):
     """

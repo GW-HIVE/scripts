@@ -18,15 +18,15 @@ Usage:
 
     * python dump-csv-stats.py --version
 
-   *This is the option that show you the program's version.*
+    *This is the option that show you the program's version.*
 
     * python dump-csv-stats.py -h
 
-   *This can show you some help information.*
+    *This can show you some help information.*
 
     * python dump-csv-stats.py -i <filename.csv> -d deliminator
 
-   *Runs the program with the specified CSV file and deliminator.*
+    *Runs the program with the specified CSV file and deliminator.*
 """
 
 import sys
