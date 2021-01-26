@@ -54,7 +54,7 @@ In this repository you will find useful resources related to the HIVE platfrom. 
 ## 11.[list_to_dict.py](https://github.com/GW-HIVE/scripts/blob/main/python/list_to_dict.py)
 * Function: This script will read a .csv file and write it to a text file as a dict
 * Command line input: `python list_to_dict.py -i <filename.txt> -k <key_index> -v <value_index> -d <deliminator>`
-* Input file:	[A.csv]https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
+* Input file:	[A.csv](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
 
 ## 12.[xml_parser.py](https://github.com/GW-HIVE/scripts/blob/main/python/xml_parser.py)
 * Function:	This script will print(std out) some domains of a .xml file.
