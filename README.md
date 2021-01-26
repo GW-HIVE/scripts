@@ -4,7 +4,7 @@ In this repository you will find useful resources related to the HIVE platfrom. 
 ## 1.[csv_to_list_parser.py](https://github.com/GW-HIVE/scripts/blob/main/python/csv_to_list_parser.py)
 * Function: This script will transfer the .csv file to dataframe and print(std out) all the rows in the file with row number.
 * Command line input: `python csv-parser.1.py -i <filename.csv>`
-* Input file:	[A.csv]https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
+* Input file:	[A.csv](https://github.com/GW-HIVE/scripts/blob/main/io_data/input_data/A.csv)
 
 ## 2.[dump_csv_stats.py](https://github.com/GW-HIVE/scripts/blob/main/python/dump_csv_stats.py)
 * Function: This script will print (std out) the fieldnames and the number of elements in each fieldname after spited by value.
