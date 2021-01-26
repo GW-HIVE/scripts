@@ -1,25 +1,21 @@
 CSV Scripts
 ============
 
-.. toctree:
-   misc_scripts
-   csv_scripts
-   fasta_fastq_scripts
+**Scripts involving the manipulation of CSV Files**
 
-**Scripts invovling CSV Files**
 
-`csv_to_list_parser.py <https://github.com/GW-HIVE/scripts/blob/main/python/csv-parser.1.py>`_
+`csv_to_list_parser.py <https://github.com/GW-HIVE/scripts/blob/main/python/csv_parser.py>`_
 
 .. automodule:: csv_to_list_parser
    :members:
 
 
-`dump_csv_stats.py <https://github.com/GW-HIVE/scripts/blob/main/python/dump-csv-stats.py>`_
+`dump_csv_stats.py <https://github.com/GW-HIVE/scripts/blob/main/python/dump_csv_stats.py>`_
 
 .. automodule:: dump_csv_stats
    :members:
    
-`parse_csv.py <https://github.com/GW-HIVE/p/parse-csv.py>`_
+`parse_csv.py <https://github.com/GW-HIVE/scripts/blob/main/python/parse_csv.py>`_
 
 .. automodule:: parse_csv
    :members:
@@ -29,7 +25,3 @@ CSV Scripts
 .. automodule:: quote_csv
    :members:
    
-`parse_big_fasta.py <https://github.com/GW-HIVE/scripts/blob/main/python/parse-big-fasta.py>`_
-
-.. automodule:: parse_big_fasta
-   :members:

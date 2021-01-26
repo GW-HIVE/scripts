@@ -5,14 +5,14 @@ will now have two sets of quotes e.g. ""quoted text"".
 Input:
 #######
 
-* -i : the path to the original csv file to edit.
+    * -i : the path to the original csv file to edit.
 
-* -o : the path to the output csv file that will contain the edits.
+    * -o : the path to the output csv file that will contain the edits.
 
 Output:
 #######
 
-* The edited csv file to the path specified in output_file argument.
+    * The edited csv file to the path specified in output_file argument.
 
 Usage:
 #######

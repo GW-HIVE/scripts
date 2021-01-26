@@ -61,6 +61,7 @@ def main():
     try:
         original_list = ast.literal_eval(open(options.infile).read())
     except FileNotFoundError:
+        print("Invalid file.")
         parser.print_help()
         sys.exit()
 
@@ -72,15 +73,17 @@ def main():
         contains_deliminator = False
 
     try:
-        key_index = int(options.key)
+        key_index = int(options.key) - 1
     except ValueError:
+        print("Invalid key index")
         parser.print_help()
         sys.exit()
 
     try:
-        value_index = int(options.value)
+        value_index = int(options.value) - 1
 
     except ValueError:
+        print("Invalid value index")
         parser.print_help()
         sys.exit()
 

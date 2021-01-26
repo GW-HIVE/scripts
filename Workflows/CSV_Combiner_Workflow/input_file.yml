@@ -1,11 +1,20 @@
   mapping_value: 
     class: File
-    path: mapping_file.csv
+    path: <path to mapping file>
   original_csv: 
     class: File
-    path: original_file.csv
-  filename: desired_filename
-  header_index: 1
+    path: <path to original file>
+  filename: <desired filename>
+  header_index: <header index>
+  script_1: 
+    class: File
+    path: ../../python/csv_to_list_parser.py
+  script_2:
+    class: File
+    path: ../../python/list_to_dict.py
+  script_3:
+    class: File
+    path: ../../python/csv_value_replacer.py 
   
 
 

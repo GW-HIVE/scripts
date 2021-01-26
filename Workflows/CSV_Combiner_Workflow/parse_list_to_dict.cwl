@@ -4,12 +4,16 @@ $namespaces:
   sbg: 'https://www.sevenbridges.com/'
 id: parse_list
 baseCommand:
-  - python ../python/list_to_dict.py
+  - python
 inputs:
   - id: to_parse
     type: File
     inputBinding:
       position: 0
+  - id: script
+    type: File
+    inputBinding:
+      position: -1
 outputs:
   - id: parsed_file
     type: File
@@ -17,7 +21,6 @@ outputs:
       glob: dict.txt
 arguments:
   - position: 0
-    prefix: ''
     valueFrom: '-i'
   - position: 2
     prefix: '-k'
@@ -25,14 +28,13 @@ arguments:
   - position: 3
     prefix: '-v'
     valueFrom: '2'
-  - position: 0
+  - position: 4
     prefix: '-d'
     valueFrom: '; '
 requirements:
-  - class: DockerRequirement
-    dockerOutputDirectory: \src
   - class: InitialWorkDirRequirement
     listing:
       - $(inputs.to_parse)
+      - $(inputs.script)
   - class: InlineJavascriptRequirement
 stdout: dict.txt

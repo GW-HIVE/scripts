@@ -27,7 +27,7 @@ Usage:
 
     *This can show you some help information.*
 
-    * python csv_value_replacer.py -i <filename.txt> -v <header_index> -d <mapping_dict>
+    * python csv_value_replacer.py -i <csv_file_list.txt> -v <header_index> -d <mapping_dict.txt>
 
     *Runs the program given the specified CSV file.*
 
@@ -35,6 +35,7 @@ Usage:
 import sys
 from argparse import ArgumentParser
 import ast
+
 __version__ = "1.0"
 
 
@@ -43,7 +44,7 @@ def main():
     usage = "\n%prog  [options]"
     parser = ArgumentParser(description=usage)
     parser.add_argument("-i", "--csvfile", action="store", dest="csvfile",
-                        help="Name of CSV file to be summed")
+                        help="Name of CSV file [as list] to be summed")
     parser.add_argument("-v", "--header_index", action="store", dest="header_index",
                         help="Header Index")
     parser.add_argument("-d", "--mapping_dict", action="store", dest="mapping_dict",
@@ -57,6 +58,7 @@ def main():
     try:
         header_index = int(options.header_index)
     except ValueError:
+        print("Invalid header index")
         parser.print_help()
         sys.exit(0)
 
@@ -64,6 +66,7 @@ def main():
     try:
         mapping_dict = ast.literal_eval(open(options.mapping_dict).read())
     except FileNotFoundError:
+        print("invalid mapping dict")
         parser.print_help()
         sys.exit(0)
 
@@ -71,6 +74,7 @@ def main():
     try:
         csv_as_list = ast.literal_eval(open(options.csvfile).read())
     except FileNotFoundError:
+        print("Invalid csv")
         parser.print_help()
         sys.exit(0)
 
@@ -125,6 +129,7 @@ def main():
     # Print contents to csv_file
     for line in new_csv_file:
         print(",".join((str(v) for v in line)))
+
 
 if __name__ == "__main__":
     main()
