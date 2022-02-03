@@ -1,0 +1,3 @@
+[submodule "file_reorganizer"]
+	path = file_reorganizer
+	url = https://github.com/escauley/file_reorganizer
