@@ -1,0 +1,8 @@
+#,Hit #,AAPOS,AAREF,AASUB,CDS,Description
+58,35,508,K,R,NP_057849.4,PI resistance
+60,46,524,M,I,NP_057849.4,PI resistance
+65,95,557,H,K,NP_057849.4,PI resistance
+66,101,577,L,M,NP_057849.4,PI resistance
+69,141,690,K,N,NP_057849.4,NNRTI resistance
+74,154,725,E,A,NP_057849.4,NNRTI resistance
+206,192,1221,L,M,NP_057849.4,INSTI resistance
